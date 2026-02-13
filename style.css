@@ -1,0 +1,44 @@
+/* Configurações Gerais */
+body { 
+    font-family: 'Inter', sans-serif; 
+    -webkit-font-smoothing: antialiased; 
+}
+
+/* Cor Principal Seday: Azul */
+.bg-blue-seday { 
+    background-color: #2563eb; 
+}
+
+/* Efeito do Header ao Rolar */
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+header.scrolled #header-logo {
+    filter: none !important; /* Volta a cor original da logo */
+}
+
+header.scrolled #desktop-menu {
+    color: #0f172a !important; /* Texto escuro no menu */
+}
+
+header.scrolled #menuBtn {
+    color: #0f172a !important;
+}
+
+/* Logos de Clientes (se for usar) */
+.client-logo { 
+    filter: grayscale(100%); 
+    opacity: 0.6; 
+    transition: all 0.4s ease;
+}
+
+.client-logo:hover { 
+    filter: grayscale(0%); 
+    opacity: 1; 
+    transform: scale(1.1);
+}
