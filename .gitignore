@@ -1,0 +1,5 @@
+# Windows / VS Code
+Thumbs.db
+.DS_Store
+.vscode/
+*.log
