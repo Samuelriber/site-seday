@@ -1,105 +1,527 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seday Transportes | Locação e Prestação de Serviços</title>
-    
-    <link rel="icon" type="image/png" href="img/SEDAY.PADRÃO02transparente.png">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Seday Transportes e Equipamentos | Locação, Intralogística e Transporte Pesado</title>
+  <meta name="description" content="A Seday Transportes e Equipamentos atua desde 1999 com locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela) e intralogística, além de transporte pesado. Matriz em Conselheiro Lafaiete/MG." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Troque pelo domínio real quando publicar -->
+  <link rel="canonical" href="https://SEU_DOMINIO_AQUI/" />
+
+  <!-- SEO Local -->
+  <meta name="geo.region" content="BR-MG" />
+  <meta name="geo.placename" content="Conselheiro Lafaiete" />
+  <meta name="geo.position" content="-20.6636;-43.7845" />
+  <meta name="ICBM" content="-20.6636, -43.7845" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Seday Transportes e Equipamentos" />
+  <meta property="og:description" content="Locação e prestação de serviços com máquinas e equipamentos, linha amarela, intralogística e transporte pesado." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://SEU_DOMINIO_AQUI/" />
+  <meta property="og:image" content="https://SEU_DOMINIO_AQUI/img/og-image.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Seday Transportes e Equipamentos" />
+  <meta name="twitter:description" content="Locação, intralogística, linha amarela e transporte pesado." />
+  <meta name="twitter:image" content="https://SEU_DOMINIO_AQUI/img/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/SEDAY.PADRÃO02transparente.png" />
+
+  <!-- CSP (igual ao padrão que você está usando) -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https:;
+    frame-src https://www.google.com https://maps.google.com;
+    connect-src 'self' https://unpkg.com;
+  ">
+
+  <!-- Tailwind + Lucide -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LogisticsBusiness",
+    "name": "Seday Transportes e Equipamentos",
+    "url": "https://SEU_DOMINIO_AQUI/",
+    "image": "https://SEU_DOMINIO_AQUI/img/SEDAY.PADRÃO02transparente.png",
+    "telephone": "+55 31 98465-7066",
+    "email": "comercial@seday.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rodovia BR-040, 22750, Barreira",
+      "addressLocality": "Conselheiro Lafaiete",
+      "addressRegion": "MG",
+      "postalCode": "36400-000",
+      "addressCountry": "BR"
+    },
+    "areaServed": "BR",
+    "description": "Locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela), intralogística e transporte pesado."
+  }
+  </script>
 </head>
+
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
-    <a href="https://wa.me/5531984657066" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-green-500 p-3 rounded-full shadow-2xl hover:bg-green-600 transition-all flex items-center justify-center group hover:scale-110">
-        <span class="absolute right-full mr-3 bg-slate-800 text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-bold">
-            Falar com a Joice
-        </span>
-        <img src="img/whatsapp.png" alt="WhatsApp" class="w-8 h-8 md:w-10 md:h-10 object-contain">
-    </a>
+  <!-- WhatsApp Floating -->
+  <a href="https://wa.me/5531984657066" target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-50 bg-green-500 p-2 md:p-3 rounded-full shadow-2xl hover:bg-green-600 transition-all flex items-center justify-center group hover:scale-110 border-2 border-white/20">
+    <span class="absolute right-full mr-3 bg-slate-800 text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-bold">
+      Falar com a Joice
+    </span>
+    <img src="img/whatsapp.png" alt="WhatsApp" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
+  </a>
 
-    <header id="main-header" class="fixed w-full z-40 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 transition-all duration-300">
-        <nav class="w-full px-6 md:px-10 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <a href="#home">
-                    <img id="header-logo" src="img/SEDAY.PADRÃO02transparente.png" alt="Seday Logo" class="h-10 md:h-12 brightness-0 invert transition-all">
-                </a>
+  <!-- Header -->
+  <header id="main-header" class="fixed w-full z-40 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 transition-all duration-300">
+    <nav class="w-full px-6 md:px-10 py-4 flex justify-between items-center">
+      <a href="#home" class="flex items-center gap-2">
+        <img id="header-logo" src="img/SEDAY.PADRÃO02transparente.png" alt="Seday Logo"
+             class="h-10 md:h-12 w-auto object-contain brightness-0 invert transition-all duration-300" />
+      </a>
+
+      <div id="desktop-menu" class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300 transition-colors duration-300">
+        <a href="#home" class="hover:text-blue-400 transition-colors">Início</a>
+        <a href="#clientes" class="hover:text-blue-400 transition-colors">Clientes</a>
+        <a href="#servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
+        <a href="#equipamentos" class="hover:text-blue-400 transition-colors">Equipamentos</a>
+        <a href="#mvv" class="hover:text-blue-400 transition-colors">MVV</a>
+        <a href="#orcamento" class="bg-blue-600 text-white px-5 py-2 rounded shadow-lg hover:bg-blue-700 transition-all">Orçamento</a>
+      </div>
+
+      <button class="md:hidden text-white transition-colors duration-300" id="menuBtn" aria-label="Abrir menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="fixed inset-0 bg-slate-900 z-50 flex flex-col items-center justify-center gap-8 text-white hidden">
+    <button class="absolute top-6 right-6" id="closeBtn" aria-label="Fechar menu">
+      <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <a href="#home" class="text-2xl font-bold">Início</a>
+    <a href="#clientes" class="text-2xl font-bold">Clientes</a>
+    <a href="#servicos" class="text-2xl font-bold">Serviços</a>
+    <a href="#equipamentos" class="text-2xl font-bold">Equipamentos</a>
+    <a href="#mvv" class="text-2xl font-bold">MVV</a>
+    <a href="#orcamento" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold">Orçamento</a>
+  </div>
+
+  <!-- Hero -->
+  <section id="home" class="relative h-screen w-full overflow-hidden flex items-center justify-center bg-slate-900">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-900/90 to-slate-800/90 z-10"></div>
+
+    <div class="container mx-auto px-6 relative z-20 text-center text-white mt-16">
+      <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded text-sm font-bold uppercase mb-8 tracking-wider shadow-lg">
+        <i data-lucide="award" class="w-4 h-4"></i>
+        Qualidade que Inspira Confiança
+      </div>
+
+      <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-8 drop-shadow-lg">
+        Seday Transportes <br class="hidden md:block" />
+        <span class="text-blue-400">desde 1999</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium">
+        Locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela),
+        intralogística e transporte pesado — com foco em eficiência, pontualidade e segurança. :contentReference[oaicite:1]{index=1}
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#orcamento" class="bg-blue-600 text-white px-10 py-4 rounded font-bold text-center shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 text-lg">
+          Solicitar Orçamento
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="#servicos" class="border-2 border-white/50 backdrop-blur-sm text-white px-10 py-4 rounded font-bold text-center hover:bg-white/10 hover:border-white transition-all text-lg">
+          Conhecer Soluções
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Métricas -->
+  <section class="py-16 bg-white border-b border-slate-100">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 hover:shadow-lg transition-all">
+          <span class="block text-5xl font-extrabold text-blue-600 mb-2">27+</span>
+          <span class="text-slate-600 font-bold uppercase text-sm tracking-wide">Anos de História</span>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 hover:shadow-lg transition-all">
+          <span class="block text-5xl font-extrabold text-blue-600 mb-2">ISO</span>
+          <span class="text-slate-600 font-bold uppercase text-sm tracking-wide">Qualidade</span>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 hover:shadow-lg transition-all">
+          <span class="block text-5xl font-extrabold text-blue-600 mb-2">MG/SP/RJ</span>
+          <span class="text-slate-600 font-bold uppercase text-sm tracking-wide">Atuação Regional</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clientes (CARROSSEL) -->
+  <section id="clientes" class="py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-slate-900 text-3xl font-extrabold mb-4">Principais Clientes</h2>
+        <div class="w-24 h-1 bg-blue-600 mx-auto rounded"></div>
+        <p class="text-slate-600 mt-4">Empresas que confiam na robustez operacional da Seday.</p>
+      </div>
+
+      <div class="logo-carousel" aria-label="Principais clientes">
+        <!-- Linha 1 -->
+        <div class="logo-track row-1" aria-label="Clientes - linha 1">
+          <div class="logo-set">
+            <img src="img/cliente-vale.png" alt="Vale" class="client-logo h-14 w-auto object-contain">
+            <img src="img/cliente-usiminas.png" alt="Usiminas" class="client-logo h-16 w-auto object-contain">
+            <img src="img/mrslog.png" alt="MRS" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-gps.png" alt="Grupo GPS" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-vli.png" alt="VLI" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-magnesita.png" alt="RHI Magnesita" class="client-logo h-16 w-auto object-contain">
+          </div>
+          <div class="logo-set" aria-hidden="true">
+            <img src="img/cliente-vale.png" alt="" class="client-logo h-14 w-auto object-contain">
+            <img src="img/cliente-usiminas.png" alt="" class="client-logo h-16 w-auto object-contain">
+            <img src="img/mrslog.png" alt="" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-gps.png" alt="" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-vli.png" alt="" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-magnesita.png" alt="" class="client-logo h-16 w-auto object-contain">
+          </div>
+        </div>
+
+        <!-- Linha 2 -->
+        <div class="logo-track row-2" aria-label="Clientes - linha 2">
+          <div class="logo-set">
+            <img src="img/cliente-mip.png" alt="MIP" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-milplan.png" alt="Milplan" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-timken.png" alt="Timken" class="client-logo h-14 w-auto object-contain">
+            <img src="img/cliente-aterpa.png" alt="Aterpa" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-reframax.webp" alt="Reframax" class="client-logo h-14 w-auto object-contain">
+            <img src="img/cliente-terraco.png" alt="Terraço" class="client-logo h-16 w-auto object-contain">
+          </div>
+          <div class="logo-set" aria-hidden="true">
+            <img src="img/cliente-mip.png" alt="" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-milplan.png" alt="" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-timken.png" alt="" class="client-logo h-14 w-auto object-contain">
+            <img src="img/cliente-aterpa.png" alt="" class="client-logo h-16 w-auto object-contain">
+            <img src="img/cliente-reframax.webp" alt="" class="client-logo h-14 w-auto object-contain">
+            <img src="img/cliente-terraco.png" alt="" class="client-logo h-16 w-auto object-contain">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-24 bg-slate-50 border-t border-slate-200">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-slate-900 text-4xl font-extrabold mb-4">Nossos Serviços</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">
+          Locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela) e intralogística. :contentReference[oaicite:2]{index=2}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200">
+          <div class="bg-blue-600 w-14 h-14 rounded-lg flex items-center justify-center mb-6 text-white">
+            <i data-lucide="wrench" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-slate-900">Locação e Prestação de Serviços</h3>
+          <p class="text-sm text-slate-600">Com ou sem mão de obra, com equipamentos e máquinas sob demanda.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200">
+          <div class="bg-blue-600 w-14 h-14 rounded-lg flex items-center justify-center mb-6 text-white">
+            <i data-lucide="boxes" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-slate-900">Movimentação de Cargas</h3>
+          <p class="text-sm text-slate-600">Equipamentos de movimentação e linha amarela com foco em segurança.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-200">
+          <div class="bg-blue-600 w-14 h-14 rounded-lg flex items-center justify-center mb-6 text-white">
+            <i data-lucide="package-search" class="w-8 h-8"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-slate-900">Intralogística</h3>
+          <p class="text-sm text-slate-600">Transporte interno e suporte operacional para rotinas industriais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipamentos -->
+  <section id="equipamentos" class="py-24 bg-white border-t border-slate-200">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-slate-900 text-4xl font-extrabold mb-4">Nossos Equipamentos</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">
+          Frota e equipamentos para operações de transporte, movimentação e locação com segurança e performance. :contentReference[oaicite:3]{index=3}
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between gap-6 mb-6">
+            <h3 class="text-2xl font-extrabold text-slate-900">Frota Rodoviária</h3>
+            <i data-lucide="truck" class="w-8 h-8 text-blue-600"></i>
+          </div>
+          <ul class="equip-list">
+            <li>Transporte com Caminhão Basculante</li>
+            <li>Locação de Caminhão Munck</li>
+            <li>Locação de Carreta Prancha</li>
+            <li>Locação de Caminhão Comboio</li>
+            <li>Locação de Caminhão Pipa</li>
+            <li>Locação de Carreta Carga Seca</li>
+            <li>Locação de Caminhão ¾ com cabine suplementar</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all">
+          <div class="flex items-center justify-between gap-6 mb-6">
+            <h3 class="text-2xl font-extrabold text-slate-900">Movimentação e Locação</h3>
+            <i data-lucide="hard-hat" class="w-8 h-8 text-blue-600"></i>
+          </div>
+          <ul class="equip-list">
+            <li>Truck Carga Seca</li>
+            <li>Carregadeira</li>
+            <li>Escavadeira</li>
+            <li>Retroescavadeira</li>
+            <li>Empilhadeira</li>
+            <li>Transpaleteira</li>
+            <li>Trator de esteira</li>
+            <li>Trator de pneus</li>
+            <li>Manipuladores</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MVV (AGORA ABAIXO DE EQUIPAMENTOS) -->
+  <section id="mvv" class="py-24 bg-white border-t border-slate-200">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-slate-900 text-4xl font-extrabold mb-4">Missão, Visão e Valores</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">
+          Direcionadores que sustentam nossa cultura e a forma como entregamos resultados. :contentReference[oaicite:4]{index=4}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-blue-600 text-white font-extrabold w-10 h-10 rounded-lg flex items-center justify-center">
+              <i data-lucide="target" class="w-5 h-5"></i>
             </div>
-            
-            <div id="desktop-menu" class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
-                <a href="#home" class="hover:text-blue-400 transition-colors">Início</a>
-                <a href="#servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
-                <a href="#sobre" class="hover:text-blue-400 transition-colors">Sobre Nós</a>
-                <a href="#orcamento" class="bg-blue-600 text-white px-5 py-2 rounded shadow-lg hover:bg-blue-700 transition-all">Orçamento</a>
+            <h3 class="text-xl font-extrabold text-slate-900">Missão</h3>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            Oferecer meios eficientes em transportes e locação de máquinas e equipamentos de forma sustentável e segura,
+            com agilidade, qualidade e respeito aos nossos parceiros, minimizando os impactos ambientais. :contentReference[oaicite:5]{index=5}
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-blue-600 text-white font-extrabold w-10 h-10 rounded-lg flex items-center justify-center">
+              <i data-lucide="telescope" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Visão</h3>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            Ser uma empresa reconhecida pela excelência nos segmentos em que atua, agregando valor aos nossos clientes,
+            colaboradores e parceiros, com compromisso no resultado e responsabilidade socioambiental. :contentReference[oaicite:6]{index=6}
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 hover:shadow-xl transition-all">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="bg-blue-600 text-white font-extrabold w-10 h-10 rounded-lg flex items-center justify-center">
+              <i data-lucide="badge-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Valores</h3>
+          </div>
+
+          <ul class="text-slate-600 space-y-2 leading-relaxed list-disc pl-5">
+            <li>Desenvolvimento Profissional</li>
+            <li>Melhoria Contínua</li>
+            <li>Credibilidade</li>
+            <li>Comprometimento</li>
+            <li>Ética</li>
+            <li>Respeito</li>
+            <li>Segurança</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Orçamento -->
+  <section id="orcamento" class="py-24 bg-slate-50 border-t border-slate-200">
+    <div class="container mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="text-slate-900 text-4xl font-extrabold mb-8">Solicite seu Orçamento</h2>
+          <p class="text-slate-600 mb-12 text-lg">Entre em contato hoje mesmo. Estamos prontos para atender sua demanda com eficiência.</p>
+
+          <div class="space-y-8">
+            <div class="flex items-center gap-5">
+              <div class="bg-white p-4 rounded-full shadow-md text-blue-600"><i data-lucide="phone" class="w-6 h-6"></i></div>
+              <div>
+                <p class="font-bold text-slate-900">Telefone / WhatsApp</p>
+                <p class="text-slate-600">(31) 98465-7066 (Joice)</p>
+              </div>
             </div>
 
-            <button class="md:hidden text-white" id="menuBtn">
-                <i data-lucide="menu"></i>
+            <div class="flex items-center gap-5">
+              <div class="bg-white p-4 rounded-full shadow-md text-blue-600"><i data-lucide="mail" class="w-6 h-6"></i></div>
+              <div>
+                <p class="font-bold text-slate-900">E-mail Comercial</p>
+                <p class="text-slate-600">comercial@seday.com.br</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-5">
+              <div class="bg-white p-4 rounded-full shadow-md text-blue-600"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+              <div>
+                <p class="font-bold text-slate-900">Matriz Administrativa</p>
+                <p class="text-slate-600">Rodovia BR-040, 22750, Barreira - Conselheiro Lafaiete/MG</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 rounded-2xl overflow-hidden h-64 border border-slate-200 shadow-lg relative">
+            <iframe
+              class="w-full h-full"
+              title="Localização Seday"
+              src="https://maps.google.com/maps?q=Rodovia%20BR-040,%2022750,%20Barreira%20-%20Conselheiro%20Lafaiete/MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              style="border:0;">
+            </iframe>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-2xl">
+          <form action="mailto:comercial@seday.com.br" method="POST" enctype="text/plain" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2">Nome</label>
+                <input type="text" name="nome" required maxlength="100"
+                       class="w-full p-3 rounded-lg border border-slate-300 focus:border-blue-600 outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2">Empresa</label>
+                <input type="text" name="empresa" maxlength="100"
+                       class="w-full p-3 rounded-lg border border-slate-300 focus:border-blue-600 outline-none">
+              </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2">E-mail</label>
+                <input type="email" name="email" required
+                       class="w-full p-3 rounded-lg border border-slate-300 focus:border-blue-600 outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-slate-700 mb-2">Telefone</label>
+                <input type="tel" name="telefone" required maxlength="20"
+                       class="w-full p-3 rounded-lg border border-slate-300 focus:border-blue-600 outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Interesse</label>
+              <select name="servico" class="w-full p-3 rounded-lg border border-slate-300 bg-white focus:border-blue-600 outline-none">
+                <option>Locação de Máquinas (Linha Amarela)</option>
+                <option>Movimentação de Cargas</option>
+                <option>Intralogística</option>
+                <option>Transporte Pesado</option>
+                <option>Outros</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Mensagem</label>
+              <textarea name="mensagem" required maxlength="500" rows="4"
+                        class="w-full p-3 rounded-lg border border-slate-300 focus:border-blue-600 outline-none"></textarea>
+            </div>
+
+            <button type="submit"
+                    class="w-full bg-blue-600 text-white font-bold py-4 rounded-lg shadow-lg hover:bg-blue-700 transition-all flex items-center justify-center gap-2 text-lg">
+              Enviar Solicitação <i data-lucide="send" class="w-5 h-5"></i>
             </button>
-        </nav>
-    </header>
-
-    <section id="home" class="relative h-screen flex items-center justify-center bg-slate-900">
-        <div class="container mx-auto px-6 relative z-20 text-center text-white">
-            <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded text-sm font-bold uppercase mb-8 tracking-wider shadow-lg">
-                <i data-lucide="award" class="w-4 h-4"></i>
-                Qualidade que Inspira Confiança
-            </div>
-            
-            <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-8">
-                Seday Transportes <br/>
-                <span class="text-blue-500">27 Anos de Estrada</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-slate-300 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
-                Fundada em 1999, somos especialistas em locação de máquinas, equipamentos e transporte pesado com foco em eficiência e pontualidade.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-5 justify-center">
-                <a href="#orcamento" class="bg-blue-600 text-white px-10 py-4 rounded font-bold text-center shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 text-lg">
-                    Solicitar Orçamento
-                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
-                <a href="#servicos" class="border-2 border-white/50 backdrop-blur-sm text-white px-10 py-4 rounded font-bold text-center hover:bg-white/10 transition-all text-lg">
-                    Nossos Equipamentos
-                </a>
-            </div>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="sobre" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-slate-900 text-4xl font-extrabold mb-6">Nossa História</h2>
-                <p class="text-slate-600 text-lg leading-relaxed mb-8">
-                    A Seday Transportes atende siderúrgicas, mineradoras e construtoras, locando máquinas e realizando o transporte de produtos em harmonia com o meio ambiente. Nossa matriz está estrategicamente localizada em Conselheiro Lafaiete/MG, às margens da BR-040.
-                </p>
-                <div class="grid md:grid-cols-3 gap-8 mt-12">
-                    <div class="p-6 bg-slate-50 rounded-xl">
-                        <span class="block text-4xl font-bold text-blue-600 mb-2">27+</span>
-                        <span class="text-slate-500 font-semibold uppercase text-xs">Anos de Mercado</span>
-                    </div>
-                    <div class="p-6 bg-slate-50 rounded-xl">
-                        <span class="block text-4xl font-bold text-blue-600 mb-2">BH/RJ/SP</span>
-                        <span class="text-slate-500 font-semibold uppercase text-xs">Presença Regional</span>
-                    </div>
-                    <div class="p-6 bg-slate-50 rounded-xl">
-                        <span class="block text-4xl font-bold text-blue-600 mb-2">100%</span>
-                        <span class="text-slate-500 font-semibold uppercase text-xs">Comprometimento</span>
-                    </div>
-                </div>
-            </div>
+  <!-- Sobre / Localização (resumo) -->
+  <section id="sobre" class="py-24 bg-slate-900 text-white border-t border-slate-800">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <span class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4">Sobre Nós</span>
+        <h2 class="text-4xl font-extrabold mb-6">27 anos de estrada</h2>
+        <p class="text-slate-300 text-lg leading-relaxed">
+          Fundada em 1999, a Seday atua com locação e prestação de serviços com máquinas e equipamentos e transporte pesado,
+          atendendo siderúrgicas, mineradoras, construtoras e empresas parceiras, com foco em eficiência e pontualidade. :contentReference[oaicite:7]{index=7}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+          <h3 class="text-2xl font-extrabold mb-4">Localização Estratégica</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Matriz em Conselheiro Lafaiete/MG (BR-040), posto avançado em Belo Horizonte/MG e filiais em SP e RJ,
+            com unidades de apoio em Juatuba/MG e Ipatinga/MG. :contentReference[oaicite:8]{index=8}
+          </p>
         </div>
-    </section>
 
-    <footer class="bg-slate-900 border-t border-slate-800 py-10 text-slate-500 text-center text-sm">
-        <p>© 2026 Seday Transportes e Equipamentos. Todos os direitos reservados.</p>
-    </footer>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
+          <h3 class="text-2xl font-extrabold mb-4">Contato</h3>
+          <div class="space-y-3 text-slate-300">
+            <p><span class="text-white font-bold">Joice:</span> (31) 98465-7066</p>
+            <p><span class="text-white font-bold">E-mail:</span> comercial@seday.com.br</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-10 text-slate-400">
+    <div class="container mx-auto px-6 text-center">
+      <div class="flex justify-center mb-6">
+        <img src="img/SEDAY.PADRÃO02transparente.png" alt="Seday Logo" class="h-12 brightness-0 invert opacity-60">
+      </div>
+      <p class="mb-2">Seday Transportes e Equipamentos Ltda.</p>
+      <p class="text-sm">© 2026 Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

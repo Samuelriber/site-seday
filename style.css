@@ -1,44 +1,115 @@
-/* Configurações Gerais */
-body { 
-    font-family: 'Inter', sans-serif; 
-    -webkit-font-smoothing: antialiased; 
+/* =========================================
+   ARQUIVO: style.css
+   Seday Transportes e Equipamentos
+   ========================================= */
+
+/* Geral */
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Cor Principal Seday: Azul */
-.bg-blue-seday { 
-    background-color: #2563eb; 
-}
-
-/* Efeito do Header ao Rolar */
+/* Header scrolled */
 header.scrolled {
-    background-color: rgba(255, 255, 255, 0.98) !important;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08),
+    0 2px 4px -1px rgba(0, 0, 0, 0.05);
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
 
-header.scrolled #header-logo {
-    filter: none !important; /* Volta a cor original da logo */
+#desktop-menu a {
+  transition: color 0.25s ease;
 }
 
-header.scrolled #desktop-menu {
-    color: #0f172a !important; /* Texto escuro no menu */
+/* iframe */
+iframe {
+  border-radius: 1rem;
 }
 
-header.scrolled #menuBtn {
-    color: #0f172a !important;
+/* Logos (hover leve) */
+.client-logo {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease,
+    filter 0.35s ease;
 }
 
-/* Logos de Clientes (se for usar) */
-.client-logo { 
-    filter: grayscale(100%); 
-    opacity: 0.6; 
-    transition: all 0.4s ease;
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.12);
+  cursor: pointer;
 }
 
-.client-logo:hover { 
-    filter: grayscale(0%); 
-    opacity: 1; 
-    transform: scale(1.1);
+/* --- Logo Carousel (loop contínuo) --- */
+.logo-carousel {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+}
+
+.logo-set {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+  flex: 0 0 auto;
+}
+
+/* animações (metade do track porque duplicou) */
+.logo-track.row-1 {
+  animation: scroll-left 26s linear infinite;
+}
+
+.logo-track.row-2 {
+  animation: scroll-right 28s linear infinite;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* Lista de equipamentos */
+.equip-list {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.equip-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.equip-list li::before {
+  content: "➤";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2563eb; /* azul Seday */
+  opacity: 0.9;
 }
