@@ -130,36 +130,49 @@
   </div>
 
   <!-- Hero -->
-  <section id="home" class="relative h-screen w-full overflow-hidden flex items-center justify-center bg-slate-900">
-    <div class="absolute inset-0 bg-gradient-to-b from-slate-900/90 to-slate-800/90 z-10"></div>
+  <section id="home" class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+  <!-- Vídeo BG -->
+  <video autoplay muted loop playsinline preload="metadata"
+         class="absolute inset-0 w-full h-full object-cover z-0">
+    <source src="img/videoSITE.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeos HTML5.
+  </video>
 
-    <div class="container mx-auto px-6 relative z-20 text-center text-white mt-16">
-      <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded text-sm font-bold uppercase mb-8 tracking-wider shadow-lg">
-        <i data-lucide="award" class="w-4 h-4"></i>
-        Qualidade que Inspira Confiança
-      </div>
+  <!-- Overlay escuro pra leitura do texto -->
+  <div class="absolute inset-0 bg-slate-900/65 z-10"></div>
 
-      <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-8 drop-shadow-lg">
-        Seday Transportes <br class="hidden md:block" />
-        <span class="text-blue-400">desde 1999</span>
-      </h1>
-
-      <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium">
-        Locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela),
-        intralogística e transporte pesado — com foco em eficiência, pontualidade e segurança. :contentReference[oaicite:1]{index=1}
-      </p>
-
-      <div class="flex flex-col sm:flex-row gap-5 justify-center">
-        <a href="#orcamento" class="bg-blue-600 text-white px-10 py-4 rounded font-bold text-center shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 text-lg">
-          Solicitar Orçamento
-          <i data-lucide="arrow-right" class="w-5 h-5"></i>
-        </a>
-        <a href="#servicos" class="border-2 border-white/50 backdrop-blur-sm text-white px-10 py-4 rounded font-bold text-center hover:bg-white/10 hover:border-white transition-all text-lg">
-          Conhecer Soluções
-        </a>
-      </div>
+  <!-- Conteúdo -->
+  <div class="container mx-auto px-6 relative z-20 text-center text-white mt-16">
+    <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded text-sm font-bold uppercase mb-8 tracking-wider shadow-lg">
+      <i data-lucide="award" class="w-4 h-4"></i>
+      Qualidade que Inspira Confiança
     </div>
-  </section>
+
+    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-8 drop-shadow-lg">
+      Seday Transportes <br class="hidden md:block" />
+      <span class="text-blue-400">desde 1999</span>
+    </h1>
+
+    <p class="text-lg md:text-xl text-slate-100 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium">
+      Locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela),
+      intralogística e transporte pesado.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-5 justify-center">
+      <a href="#orcamento"
+         class="bg-blue-600 text-white px-10 py-4 rounded font-bold text-center shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 text-lg">
+        Solicitar Orçamento
+        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      </a>
+
+      <a href="#servicos"
+         class="border-2 border-white/50 backdrop-blur-sm text-white px-10 py-4 rounded font-bold text-center hover:bg-white/10 hover:border-white transition-all text-lg">
+        Conhecer Soluções
+      </a>
+    </div>
+  </div>
+</section>
+
 
   <!-- Métricas -->
   <section class="py-16 bg-white border-b border-slate-100">
@@ -240,7 +253,7 @@
       <div class="text-center mb-16">
         <h2 class="text-slate-900 text-4xl font-extrabold mb-4">Nossos Serviços</h2>
         <p class="text-slate-600 max-w-2xl mx-auto">
-          Locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela) e intralogística. :contentReference[oaicite:2]{index=2}
+          Locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela) e intralogística. 
         </p>
       </div>
 
@@ -278,7 +291,7 @@
       <div class="text-center mb-16">
         <h2 class="text-slate-900 text-4xl font-extrabold mb-4">Nossos Equipamentos</h2>
         <p class="text-slate-600 max-w-2xl mx-auto">
-          Frota e equipamentos para operações de transporte, movimentação e locação com segurança e performance. :contentReference[oaicite:3]{index=3}
+          Frota e equipamentos para operações de transporte, movimentação e locação com segurança e performance. 
         </p>
       </div>
 
@@ -326,7 +339,7 @@
       <div class="text-center mb-16">
         <h2 class="text-slate-900 text-4xl font-extrabold mb-4">Missão, Visão e Valores</h2>
         <p class="text-slate-600 max-w-2xl mx-auto">
-          Direcionadores que sustentam nossa cultura e a forma como entregamos resultados. :contentReference[oaicite:4]{index=4}
+          Direcionadores que sustentam nossa cultura e a forma como entregamos resultados. 
         </p>
       </div>
 
@@ -340,7 +353,7 @@
           </div>
           <p class="text-slate-600 leading-relaxed">
             Oferecer meios eficientes em transportes e locação de máquinas e equipamentos de forma sustentável e segura,
-            com agilidade, qualidade e respeito aos nossos parceiros, minimizando os impactos ambientais. :contentReference[oaicite:5]{index=5}
+            com agilidade, qualidade e respeito aos nossos parceiros, minimizando os impactos ambientais. 
           </p>
         </div>
 
@@ -353,7 +366,7 @@
           </div>
           <p class="text-slate-600 leading-relaxed">
             Ser uma empresa reconhecida pela excelência nos segmentos em que atua, agregando valor aos nossos clientes,
-            colaboradores e parceiros, com compromisso no resultado e responsabilidade socioambiental. :contentReference[oaicite:6]{index=6}
+            colaboradores e parceiros, com compromisso no resultado e responsabilidade socioambiental. 
           </p>
         </div>
 
@@ -481,36 +494,82 @@
   </section>
 
   <!-- Sobre / Localização (resumo) -->
-  <section id="sobre" class="py-24 bg-slate-900 text-white border-t border-slate-800">
-    <div class="container mx-auto px-6">
-      <div class="max-w-4xl mx-auto text-center mb-16">
-        <span class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4">Sobre Nós</span>
-        <h2 class="text-4xl font-extrabold mb-6">27 anos de estrada</h2>
-        <p class="text-slate-300 text-lg leading-relaxed">
-          Fundada em 1999, a Seday atua com locação e prestação de serviços com máquinas e equipamentos e transporte pesado,
-          atendendo siderúrgicas, mineradoras, construtoras e empresas parceiras, com foco em eficiência e pontualidade. :contentReference[oaicite:7]{index=7}
+  <!-- Sobre / Grupo (estilo Avapex, tema Seday) -->
+<section id="sobre" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+  <div class="container mx-auto px-6 relative z-10">
+
+    <!-- topo: título + texto -->
+    <div class="max-w-4xl mx-auto text-center mb-20">
+      <span class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">
+        Sobre Nós
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+        27 Anos de Estrada
+      </h2>
+
+      <p class="text-slate-300 text-lg leading-relaxed">
+        Fundada em 1999, a Seday atua com locação e prestação de serviços com máquinas e equipamentos,
+        além de transporte pesado, atendendo siderúrgicas, mineradoras, construtoras e empresas parceiras,
+        com foco em eficiência, segurança e pontualidade.
+      </p>
+    </div>
+
+    <!-- linha do grupo -->
+    <div class="border-t border-slate-700 pt-16">
+      <div class="text-center mb-12">
+        <h3 class="text-2xl font-bold mb-2">
+          Parte de um Grupo <span class="text-blue-400">Consolidado</span>
+        </h3>
+        <p class="text-slate-400">
+          Sinergia para garantir capacidade de atendimento completa.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
-          <h3 class="text-2xl font-extrabold mb-4">Localização Estratégica</h3>
-          <p class="text-slate-300 leading-relaxed">
-            Matriz em Conselheiro Lafaiete/MG (BR-040), posto avançado em Belo Horizonte/MG e filiais em SP e RJ,
-            com unidades de apoio em Juatuba/MG e Ipatinga/MG. :contentReference[oaicite:8]{index=8}
+      <div class="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
+        <!-- AVAPEX -->
+        <div class="text-center group hover:scale-105 transition-transform">
+          <a href="#"
+             class="block">
+            <img src="img/AVAPEX OFICIAL 01.png" alt="Avapex Transportes"
+                 class="h-16 md:h-18 w-auto mx-auto mb-4 object-contain brightness-0 invert opacity-90">
+          </a>
+          <p class="text-slate-400 text-sm max-w-[220px] mx-auto">
+            Transporte e Logística Industrial
           </p>
         </div>
 
-        <div class="bg-white/5 border border-white/10 rounded-2xl p-8">
-          <h3 class="text-2xl font-extrabold mb-4">Contato</h3>
-          <div class="space-y-3 text-slate-300">
-            <p><span class="text-white font-bold">Joice:</span> (31) 98465-7066</p>
-            <p><span class="text-white font-bold">E-mail:</span> comercial@seday.com.br</p>
-          </div>
+        <div class="hidden md:block h-20 w-[1px] bg-slate-700"></div>
+
+        <!-- SEDAY (destaque) -->
+        <div class="text-center group hover:scale-105 transition-transform">
+          <img src="img/SEDAY.PADRÃO02transparente.png" alt="Seday Equipamentos"
+               class="h-24 md:h-28 w-auto mx-auto mb-4 object-contain">
+          <p class="text-slate-400 text-sm max-w-[240px] mx-auto">
+            Locação de máquinas e equipamentos • Intralogística • Transporte pesado
+          </p>
+        </div>
+
+        <div class="hidden md:block h-20 w-[1px] bg-slate-700"></div>
+
+        <!-- INNOMACH -->
+        <div class="text-center group hover:scale-105 transition-transform">
+          <a href="https://www.innomach.com.br/" target="_blank" rel="noopener noreferrer" class="block">
+            <img src="img/INNOMACH EQUIPAMENTO oficial 01.png" alt="Innomach Equipamentos"
+                 class="h-16 w-auto mx-auto mb-4 object-contain hover:opacity-80 transition-all">
+          </a>
+          <p class="text-slate-400 text-sm max-w-[220px] mx-auto">
+            Tecnologia e Maquinário Industrial
+          </p>
         </div>
       </div>
+
+      
+      
     </div>
-  </section>
+
+  </div>
+</section>
 
   <footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-10 text-slate-400">
     <div class="container mx-auto px-6 text-center">
