@@ -4,21 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
   <title>Seday Transportes e Equipamentos | Locação, Intralogística e Transporte Pesado</title>
   <meta name="description" content="A Seday Transportes e Equipamentos atua desde 1999 com locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela) e intralogística, além de transporte pesado. Matriz em Conselheiro Lafaiete/MG." />
   <meta name="robots" content="index, follow" />
 
-  <!-- Troque pelo domínio real quando publicar -->
   <link rel="canonical" href="https://SEU_DOMINIO_AQUI/" />
 
-  <!-- SEO Local -->
   <meta name="geo.region" content="BR-MG" />
   <meta name="geo.placename" content="Conselheiro Lafaiete" />
   <meta name="geo.position" content="-20.6636;-43.7845" />
   <meta name="ICBM" content="-20.6636, -43.7845" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Seday Transportes e Equipamentos" />
   <meta property="og:description" content="Locação e prestação de serviços com máquinas e equipamentos, linha amarela, intralogística e transporte pesado." />
   <meta property="og:type" content="website" />
@@ -26,17 +22,13 @@
   <meta property="og:image" content="https://SEU_DOMINIO_AQUI/img/og-image.jpg" />
   <meta property="og:locale" content="pt_BR" />
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Seday Transportes e Equipamentos" />
   <meta name="twitter:description" content="Locação, intralogística, linha amarela e transporte pesado." />
   <meta name="twitter:image" content="https://SEU_DOMINIO_AQUI/img/og-image.jpg" />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="img/SEDAY icone .png">
 
-
-  <!-- CSP (igual ao padrão que você está usando) -->
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com;
@@ -47,19 +39,15 @@
     connect-src 'self' https://unpkg.com;
   ">
 
-  <!-- Tailwind + Lucide -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-  <!-- Fonte -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -85,7 +73,6 @@
 
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
 
-  <!-- WhatsApp Floating -->
   <a href="https://wa.me/5531984657066" target="_blank" rel="noopener noreferrer"
      class="fixed bottom-6 right-6 z-50 bg-green-500 p-2 md:p-3 rounded-full shadow-2xl hover:bg-green-600 transition-all flex items-center justify-center group hover:scale-110 border-2 border-white/20">
     <span class="absolute right-full mr-3 bg-slate-800 text-white text-xs px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-bold">
@@ -94,7 +81,6 @@
     <img src="img/whatsapp.png" alt="WhatsApp" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
   </a>
 
-  <!-- Header -->
   <header id="main-header" class="fixed w-full z-40 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 transition-all duration-300">
     <nav class="w-full px-6 md:px-10 py-4 flex justify-between items-center">
       <a href="#home" class="flex items-center gap-2">
@@ -108,16 +94,18 @@
         <a href="#servicos" class="hover:text-blue-400 transition-colors">Serviços</a>
         <a href="#equipamentos" class="hover:text-blue-400 transition-colors">Equipamentos</a>
         <a href="#mvv" class="hover:text-blue-400 transition-colors">MVV</a>
+        <a href="https://avapextransportes.vagas.solides.com.br/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors">Trabalhe Conosco</a>
         <a href="#orcamento" class="bg-blue-600 text-white px-5 py-2 rounded shadow-lg hover:bg-blue-700 transition-all">Orçamento</a>
       </div>
 
-      <button class="md:hidden text-white transition-colors duration-300" id="menuBtn" aria-label="Abrir menu">
-        <i data-lucide="menu"></i>
+      <button class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-slate-800/80 border border-slate-700 text-white shadow-lg backdrop-blur-sm transition-all active:scale-90" 
+              id="menuBtn" 
+              aria-label="Abrir menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
     </nav>
   </header>
 
-  <!-- Mobile Menu -->
   <div id="mobileMenu" class="fixed inset-0 bg-slate-900 z-50 flex flex-col items-center justify-center gap-8 text-white hidden">
     <button class="absolute top-6 right-6" id="closeBtn" aria-label="Fechar menu">
       <i data-lucide="x" class="w-8 h-8"></i>
@@ -127,55 +115,50 @@
     <a href="#servicos" class="text-2xl font-bold">Serviços</a>
     <a href="#equipamentos" class="text-2xl font-bold">Equipamentos</a>
     <a href="#mvv" class="text-2xl font-bold">MVV</a>
+    <a href="https://avapextransportes.vagas.solides.com.br/" target="_blank" rel="noopener noreferrer" class="text-2xl font-bold text-blue-400">Trabalhe Conosco</a>
     <a href="#orcamento" class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold">Orçamento</a>
   </div>
 
-  <!-- Hero -->
   <section id="home" class="relative h-screen w-full overflow-hidden flex items-center justify-center">
-  <!-- Vídeo BG -->
-  <video autoplay muted loop playsinline preload="metadata"
-         class="absolute inset-0 w-full h-full object-cover z-0">
-    <source src="img/videoSITE.mp4" type="video/mp4" />
-    Seu navegador não suporta vídeos HTML5.
-  </video>
+    <video autoplay muted loop playsinline preload="metadata"
+           class="absolute inset-0 w-full h-full object-cover z-0">
+      <source src="img/videoSITE.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeos HTML5.
+    </video>
 
-  <!-- Overlay escuro pra leitura do texto -->
-  <div class="absolute inset-0 bg-slate-900/65 z-10"></div>
+    <div class="absolute inset-0 bg-slate-900/65 z-10"></div>
 
-  <!-- Conteúdo -->
-  <div class="container mx-auto px-6 relative z-20 text-center text-white mt-16">
-    <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded text-sm font-bold uppercase mb-8 tracking-wider shadow-lg">
-      <i data-lucide="award" class="w-4 h-4"></i>
-      Qualidade que Inspira Confiança
+    <div class="container mx-auto px-6 relative z-20 text-center text-white mt-16">
+      <div class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-1.5 rounded text-sm font-bold uppercase mb-8 tracking-wider shadow-lg">
+        <i data-lucide="award" class="w-4 h-4"></i>
+        Qualidade que Inspira Confiança
+      </div>
+
+      <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-8 drop-shadow-lg">
+        Seday Transportes <br class="hidden md:block" />
+        <span class="text-blue-400">desde 1999</span>
+      </h1>
+
+      <p class="text-lg md:text-xl text-slate-100 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium">
+        Locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela),
+        intralogística e transporte pesado.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-5 justify-center">
+        <a href="#orcamento"
+           class="bg-blue-600 text-white px-10 py-4 rounded font-bold text-center shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 text-lg">
+          Solicitar Orçamento
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+
+        <a href="#servicos"
+           class="border-2 border-white/50 backdrop-blur-sm text-white px-10 py-4 rounded font-bold text-center hover:bg-white/10 hover:border-white transition-all text-lg">
+          Conhecer Soluções
+        </a>
+      </div>
     </div>
+  </section>
 
-    <h1 class="text-4xl md:text-7xl font-extrabold leading-tight mb-8 drop-shadow-lg">
-      Seday Transportes <br class="hidden md:block" />
-      <span class="text-blue-400">desde 1999</span>
-    </h1>
-
-    <p class="text-lg md:text-xl text-slate-100 mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-md font-medium">
-      Locação e prestação de serviços com máquinas e equipamentos, movimentação de cargas (linha amarela),
-      intralogística e transporte pesado.
-    </p>
-
-    <div class="flex flex-col sm:flex-row gap-5 justify-center">
-      <a href="#orcamento"
-         class="bg-blue-600 text-white px-10 py-4 rounded font-bold text-center shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 text-lg">
-        Solicitar Orçamento
-        <i data-lucide="arrow-right" class="w-5 h-5"></i>
-      </a>
-
-      <a href="#servicos"
-         class="border-2 border-white/50 backdrop-blur-sm text-white px-10 py-4 rounded font-bold text-center hover:bg-white/10 hover:border-white transition-all text-lg">
-        Conhecer Soluções
-      </a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Métricas -->
   <section class="py-16 bg-white border-b border-slate-100">
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-3 gap-8 text-center">
@@ -195,7 +178,6 @@
     </div>
   </section>
 
-  <!-- Clientes (CARROSSEL) -->
   <section id="clientes" class="py-24 bg-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-12">
@@ -205,7 +187,6 @@
       </div>
 
       <div class="logo-carousel" aria-label="Principais clientes">
-        <!-- Linha 1 -->
         <div class="logo-track row-1" aria-label="Clientes - linha 1">
           <div class="logo-set">
             <img src="img/cliente-vale.png" alt="Vale" class="client-logo h-14 w-auto object-contain">
@@ -225,7 +206,6 @@
           </div>
         </div>
 
-        <!-- Linha 2 -->
         <div class="logo-track row-2" aria-label="Clientes - linha 2">
           <div class="logo-set">
             <img src="img/cliente-mip.png" alt="MIP" class="client-logo h-16 w-auto object-contain">
@@ -248,7 +228,6 @@
     </div>
   </section>
 
-  <!-- Serviços -->
   <section id="servicos" class="py-24 bg-slate-50 border-t border-slate-200">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
@@ -286,7 +265,6 @@
     </div>
   </section>
 
-  <!-- Equipamentos -->
   <section id="equipamentos" class="py-24 bg-white border-t border-slate-200">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
@@ -334,7 +312,6 @@
     </div>
   </section>
 
-  <!-- MVV (AGORA ABAIXO DE EQUIPAMENTOS) -->
   <section id="mvv" class="py-24 bg-white border-t border-slate-200">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
@@ -394,7 +371,6 @@
     </div>
   </section>
 
-  <!-- Orçamento -->
   <section id="orcamento" class="py-24 bg-slate-50 border-t border-slate-200">
     <div class="container mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-16">
@@ -495,83 +471,71 @@
     </div>
   </section>
 
-  <!-- Sobre / Localização (resumo) -->
-  <!-- Sobre / Grupo (estilo Avapex, tema Seday) -->
-<section id="sobre" class="py-24 bg-slate-900 text-white relative overflow-hidden">
-  <div class="container mx-auto px-6 relative z-10">
+  <section id="sobre" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
 
-    <!-- topo: título + texto -->
-    <div class="max-w-4xl mx-auto text-center mb-20">
-      <span class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">
-        Sobre Nós
-      </span>
+      <div class="max-w-4xl mx-auto text-center mb-20">
+        <span class="text-blue-400 font-bold tracking-widest uppercase text-sm mb-4 block">
+          Sobre Nós
+        </span>
 
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
-        27 Anos de Estrada
-      </h2>
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+          27 Anos de Estrada
+        </h2>
 
-      <p class="text-slate-300 text-lg leading-relaxed">
-        Fundada em 1999, a Seday atua com locação e prestação de serviços com máquinas e equipamentos,
-        além de transporte pesado, atendendo siderúrgicas, mineradoras, construtoras e empresas parceiras,
-        com foco em eficiência, segurança e pontualidade.
-      </p>
-    </div>
-
-    <!-- linha do grupo -->
-    <div class="border-t border-slate-700 pt-16">
-      <div class="text-center mb-12">
-        <h3 class="text-2xl font-bold mb-2">
-          Parte de um Grupo <span class="text-blue-400">Consolidado</span>
-        </h3>
-        <p class="text-slate-400">
-          Sinergia para garantir capacidade de atendimento completa.
+        <p class="text-slate-300 text-lg leading-relaxed">
+          Fundada em 1999, a Seday atua com locação e prestação de serviços com máquinas e equipamentos,
+          além de transporte pesado, atendendo siderúrgicas, mineradoras, construtoras e empresas parceiras,
+          com foco em eficiência, segurança e pontualidade.
         </p>
       </div>
 
-      <div class="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
-        <!-- AVAPEX -->
-        <div class="text-center group hover:scale-105 transition-transform">
-          <a href="#"
-             class="block">
-            <img src="img/AVAPEX OFICIAL 01.png" alt="Avapex Transportes"
-                 class="h-16 md:h-18 w-auto mx-auto mb-4 object-contain brightness-0 invert opacity-90">
-          </a>
-          <p class="text-slate-400 text-sm max-w-[220px] mx-auto">
-            Transporte e Logística Industrial
+      <div class="border-t border-slate-700 pt-16">
+        <div class="text-center mb-12">
+          <h3 class="text-2xl font-bold mb-2">
+            Parte de um Grupo <span class="text-blue-400">Consolidado</span>
+          </h3>
+          <p class="text-slate-400">
+            Sinergia para garantir capacidade de atendimento completa.
           </p>
         </div>
 
-        <div class="hidden md:block h-20 w-[1px] bg-slate-700"></div>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24">
+          <div class="text-center group hover:scale-105 transition-transform">
+            <a href="#" class="block">
+              <img src="img/AVAPEX OFICIAL 01.png" alt="Avapex Transportes"
+                   class="h-16 md:h-18 w-auto mx-auto mb-4 object-contain brightness-0 invert opacity-90">
+            </a>
+            <p class="text-slate-400 text-sm max-w-[220px] mx-auto">
+              Transporte e Logística Industrial
+            </p>
+          </div>
 
-        <!-- SEDAY (destaque) -->
-        <div class="text-center group hover:scale-105 transition-transform">
-          <img src="img/SEDAY.PADRÃO02transparente.png" alt="Seday Equipamentos"
-               class="h-24 md:h-28 w-auto mx-auto mb-4 object-contain">
-          <p class="text-slate-400 text-sm max-w-[240px] mx-auto">
-            Locação de máquinas e equipamentos • Intralogística • Transporte pesado
-          </p>
-        </div>
+          <div class="hidden md:block h-20 w-[1px] bg-slate-700"></div>
 
-        <div class="hidden md:block h-20 w-[1px] bg-slate-700"></div>
+          <div class="text-center group hover:scale-105 transition-transform">
+            <img src="img/SEDAY.PADRÃO02transparente.png" alt="Seday Equipamentos"
+                 class="h-24 md:h-28 w-auto mx-auto mb-4 object-contain">
+            <p class="text-slate-400 text-sm max-w-[240px] mx-auto">
+              Locação de máquinas e equipamentos • Intralogística • Transporte pesado
+            </p>
+          </div>
 
-        <!-- INNOMACH -->
-        <div class="text-center group hover:scale-105 transition-transform">
-          <a href="https://www.innomach.com.br/" target="_blank" rel="noopener noreferrer" class="block">
-            <img src="img/INNOMACH EQUIPAMENTO oficial 01.png" alt="Innomach Equipamentos"
-                 class="h-16 w-auto mx-auto mb-4 object-contain hover:opacity-80 transition-all">
-          </a>
-          <p class="text-slate-400 text-sm max-w-[220px] mx-auto">
-            Tecnologia e Maquinário Industrial
-          </p>
+          <div class="hidden md:block h-20 w-[1px] bg-slate-700"></div>
+
+          <div class="text-center group hover:scale-105 transition-transform">
+            <a href="https://www.innomach.com.br/" target="_blank" rel="noopener noreferrer" class="block">
+              <img src="img/INNOMACH EQUIPAMENTO oficial 01.png" alt="Innomach Equipamentos"
+                   class="h-16 w-auto mx-auto mb-4 object-contain hover:opacity-80 transition-all">
+            </a>
+            <p class="text-slate-400 text-sm max-w-[220px] mx-auto">
+              Tecnologia e Maquinário Industrial
+            </p>
+          </div>
         </div>
       </div>
-
-      
-      
     </div>
-
-  </div>
-</section>
+  </section>
 
   <footer class="bg-slate-900 border-t border-slate-800 pt-12 pb-10 text-slate-400">
     <div class="container mx-auto px-6 text-center">
