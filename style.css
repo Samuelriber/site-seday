@@ -3,7 +3,6 @@
    Seday Transportes e Equipamentos
    ========================================= */
 
-/* Geral */
 body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,12 +24,11 @@ header.scrolled {
   transition: color 0.25s ease;
 }
 
-/* iframe */
 iframe {
   border-radius: 1rem;
 }
 
-/* Logos (hover leve) */
+/* Logos (hover) */
 .client-logo {
   filter: grayscale(100%);
   opacity: 0.7;
@@ -45,7 +43,9 @@ iframe {
   cursor: pointer;
 }
 
-/* --- Logo Carousel (loop contínuo) --- */
+/* ================================
+   LOGO CAROUSEL (FORÇADO E LENTO)
+   ================================ */
 .logo-carousel {
   overflow: hidden;
   width: 100%;
@@ -55,27 +55,27 @@ iframe {
 }
 
 .logo-track {
-  display: flex;
+  display: flex !important;
   align-items: center;
-  width: max-content;
+  width: max-content !important;
   will-change: transform;
 }
 
 .logo-set {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 2.5rem;
   padding-right: 2.5rem;
   flex: 0 0 auto;
 }
 
-/* animações (metade do track porque duplicou) */
+/* Tempo alterado para 50s para um deslize bem lento e elegante */
 .logo-track.row-1 {
-  animation: scroll-left 26s linear infinite;
+  animation: scroll-left 50s linear infinite !important;
 }
 
 .logo-track.row-2 {
-  animation: scroll-right 28s linear infinite;
+  animation: scroll-right 50s linear infinite !important;
 }
 
 @keyframes scroll-left {

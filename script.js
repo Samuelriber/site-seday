@@ -1,41 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Lucide icons
-  if (window.lucide) lucide.createIcons();
+  // Inicialização segura dos ícones
+  if (window.lucide && typeof window.lucide.createIcons === "function") {
+    window.lucide.createIcons();
+  }
 
+  // Elementos cacheados
   const header = document.getElementById("main-header");
   const headerLogo = document.getElementById("header-logo");
   const desktopMenu = document.getElementById("desktop-menu");
   const menuBtn = document.getElementById("menuBtn");
-
   const mobileMenu = document.getElementById("mobileMenu");
   const closeBtn = document.getElementById("closeBtn");
+  const menuLinks = mobileMenu?.querySelectorAll("a");
 
-  // Menu mobile
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", () => mobileMenu.classList.remove("hidden"));
-  }
-  if (closeBtn && mobileMenu) {
-    closeBtn.addEventListener("click", () => mobileMenu.classList.add("hidden"));
-  }
-  if (mobileMenu) {
-    mobileMenu.querySelectorAll("a").forEach((a) => {
-      a.addEventListener("click", () => mobileMenu.classList.add("hidden"));
-    });
-  }
+  // ==========================================
+  // Lógica do Menu Mobile
+  // ==========================================
+  const toggleMenu = () => {
+    mobileMenu?.classList.toggle("hidden");
+  };
 
-  // Header scrolled
-  window.addEventListener("scroll", () => {
-    const scrolled = window.scrollY > 50;
+  menuBtn?.addEventListener("click", toggleMenu);
+  closeBtn?.addEventListener("click", toggleMenu);
+  menuLinks?.forEach((a) => a.addEventListener("click", toggleMenu));
 
-    if (!header) return;
+  // ==========================================
+  // Lógica de Scroll (Otimizada com requestAnimationFrame)
+  // Mantém a lógica original da Seday (aplica/remove brightness invertido)
+  // ==========================================
+  let ticking = false;
 
-    if (scrolled) {
-      header.classList.add("scrolled");
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      // SCROLLED (Fundo Branco)
+      header?.classList.add("scrolled");
 
-      // Logo volta à cor original no scrolled
-      if (headerLogo) headerLogo.classList.remove("brightness-0", "invert");
+      // Tira o filtro branco para a logo original (azul/cinza) aparecer
+      headerLogo?.classList.remove("brightness-0", "invert");
 
-      // Menu texto escuro
+      // Menu desktop escuro
       if (desktopMenu) {
         desktopMenu.classList.remove("text-slate-300");
         desktopMenu.classList.add("text-slate-900");
@@ -47,22 +50,36 @@ document.addEventListener("DOMContentLoaded", () => {
         menuBtn.classList.add("text-slate-900");
       }
     } else {
-      header.classList.remove("scrolled");
+      // TOP (Fundo Azul Escuro)
+      header?.classList.remove("scrolled");
 
-      // Logo invertida (branca)
-      if (headerLogo) headerLogo.classList.add("brightness-0", "invert");
+      // Força a logo a ficar 100% branca para contrastar
+      headerLogo?.classList.add("brightness-0", "invert");
 
-      // Menu texto claro
+      // Menu desktop claro
       if (desktopMenu) {
-        desktopMenu.classList.add("text-slate-300");
         desktopMenu.classList.remove("text-slate-900");
+        desktopMenu.classList.add("text-slate-300");
       }
 
       // Botão hambúrguer branco
       if (menuBtn) {
-        menuBtn.classList.add("text-white");
         menuBtn.classList.remove("text-slate-900");
+        menuBtn.classList.add("text-white");
       }
     }
-  });
+
+    ticking = false;
+  };
+
+  // Event Listener Otimizado
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(handleScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Executa uma vez no load para garantir o estado inicial correto
+  handleScroll();
 });
