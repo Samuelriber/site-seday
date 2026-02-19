@@ -28,6 +28,11 @@ iframe {
   border-radius: 1rem;
 }
 
+/* Remove a seta feia padrão do navegador nos acordeões de FAQ */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
 /* Logos (hover) */
 .client-logo {
   filter: grayscale(100%);
@@ -69,7 +74,7 @@ iframe {
   flex: 0 0 auto;
 }
 
-/* Tempo alterado para 50s para um deslize bem lento e elegante */
+/* Tempo alterado para 50s para deslize lento */
 .logo-track.row-1 {
   animation: scroll-left 50s linear infinite !important;
 }
@@ -110,6 +115,6 @@ iframe {
   position: absolute;
   left: 0;
   top: 0;
-  color: #2563eb; /* azul Seday */
+  color: #2563eb;
   opacity: 0.9;
 }
