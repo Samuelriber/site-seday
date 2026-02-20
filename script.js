@@ -1,19 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Inicialização Segura: Ícones
+  // Inicialização dos ícones Lucide
   if (window.lucide && typeof window.lucide.createIcons === "function") {
     window.lucide.createIcons();
   }
 
-  // Inicialização Segura: Animações de Scroll (AOS)
+  // Inicialização Animações AOS
   if (window.AOS) {
     AOS.init({
-      once: true, // A animação ocorre apenas na primeira vez que rola a página
-      duration: 800, // Duração da animação (0.8 segundos)
-      offset: 50, // Começa a animar 50px antes do elemento aparecer
+      once: true,
+      duration: 800,
+      offset: 50,
+      easing: 'ease-in-out-cubic',
     });
   }
 
-  // Elementos do DOM Cacheados
+  // Cache dos elementos do DOM
   const header = document.getElementById("main-header");
   const headerLogo = document.getElementById("header-logo");
   const desktopMenu = document.getElementById("desktop-menu");
@@ -44,40 +45,53 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ==========================================
-  // Lógica de Scroll (Otimizada a 60fps)
-  // Mantém a logo Original da Seday usando filtros CSS
+  // Lógica de Scroll do Cabeçalho
+  // Muda de Escuro (Topo) para Claro (Rolagem)
   // ==========================================
   let ticking = false;
 
   const handleScroll = () => {
-    // 1. Controle do Cabeçalho e Logo
-    if (window.scrollY > 50) {
+    if (window.scrollY > 60) {
+      // ESTADO: Página Rolada (Fundo Branco com Blur)
       header?.classList.add("scrolled");
-      headerLogo?.classList.remove("brightness-0", "invert"); // Cor Original (Colorida)
+      header?.classList.remove("bg-[#0f172a]/95");
 
+      // Tira o filtro branco da logo da Seday para mostrar a original (Azul/Cinza)
+      if (headerLogo) {
+        headerLogo.classList.remove("brightness-0", "invert");
+      }
+
+      // Muda textos para escuro
       if (desktopMenu) {
         desktopMenu.classList.remove("text-slate-300");
-        desktopMenu.classList.add("text-slate-900");
+        desktopMenu.classList.add("text-[#0f172a]");
       }
       if (menuBtn) {
         menuBtn.classList.remove("text-white");
-        menuBtn.classList.add("text-slate-900");
+        menuBtn.classList.add("text-[#0f172a]");
       }
     } else {
+      // ESTADO: Topo da Página (Fundo Escuro Transparente)
       header?.classList.remove("scrolled");
-      headerLogo?.classList.add("brightness-0", "invert"); // Filtro Branco no topo
+      header?.classList.add("bg-[#0f172a]/95");
 
+      // Coloca o filtro branco na logo da Seday para destacar no fundo escuro
+      if (headerLogo) {
+        headerLogo.classList.add("brightness-0", "invert");
+      }
+
+      // Muda textos de volta para claro
       if (desktopMenu) {
-        desktopMenu.classList.remove("text-slate-900");
+        desktopMenu.classList.remove("text-[#0f172a]");
         desktopMenu.classList.add("text-slate-300");
       }
       if (menuBtn) {
-        menuBtn.classList.remove("text-slate-900");
+        menuBtn.classList.remove("text-[#0f172a]");
         menuBtn.classList.add("text-white");
       }
     }
 
-    // 2. Controle do botão "Voltar ao Topo"
+    // Controle do botão Voltar ao Topo
     if (window.scrollY > 400) {
       backToTopBtn?.classList.remove("opacity-0", "pointer-events-none", "translate-y-10");
     } else {
@@ -87,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ticking = false;
   };
 
-  // Escuta o scroll sem pesar o navegador
+  // Escuta o scroll performático
   window.addEventListener("scroll", () => {
     if (!ticking) {
       window.requestAnimationFrame(handleScroll);
@@ -95,27 +109,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, { passive: true });
 
-  handleScroll(); // Checagem inicial
+  handleScroll(); // Trigger inicial
 
   // ==========================================
-  // Banner de Cookies (LGPD)
+  // Banner de Cookies LGPD
   // ==========================================
   const cookieBanner = document.getElementById("cookieBanner");
   const acceptCookiesBtn = document.getElementById("acceptCookies");
 
   if (cookieBanner && acceptCookiesBtn) {
-    // Verifica se já aceitou antes
     if (!localStorage.getItem("seday_cookies_accepted")) {
-      // Exibe após 1,5 segundos suavemente
       setTimeout(() => {
         cookieBanner.classList.remove("translate-y-full");
       }, 1500);
     }
 
-    // Ação de Clique
     acceptCookiesBtn.addEventListener("click", () => {
       localStorage.setItem("seday_cookies_accepted", "true");
-      cookieBanner.classList.add("translate-y-full"); // Esconde de volta
+      cookieBanner.classList.add("translate-y-full");
     });
   }
 });
