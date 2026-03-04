@@ -23,15 +23,17 @@
 
   <link rel="icon" type="image/png" href="img/SEDAY icone .png">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <link rel="dns-prefetch" href="https://maps.google.com" />
+  <link rel="preload" as="image" href="img/fundo site mobile.jpg" />
 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="dist/style.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
 
   <script type="application/ld+json">
   {
@@ -71,14 +73,14 @@
       Fale com um Especialista
       <span class="absolute top-1/2 -right-1.5 -translate-y-1/2 border-y-4 border-y-transparent border-l-4 border-l-slate-800"></span>
     </span>
-    <img src="img/whatsapp.png" alt="WhatsApp" class="w-8 h-8 md:w-10 md:h-10 object-contain" />
+    <img src="img/whatsapp.png" alt="WhatsApp" class="w-8 h-8 md:w-10 md:h-10 object-contain" decoding="async" />
   </a>
 
   <header id="main-header" class="fixed w-full z-40 bg-[#0f172a]/95 backdrop-blur-sm border-b border-slate-700 transition-all duration-300 py-4">
     <nav class="container mx-auto px-6 md:px-10 flex justify-between items-center">
       <a href="#home" class="flex items-center">
         <img id="header-logo" src="img/SEDAY.PADRÃO02transparente.png" alt="Seday Transportes"
-             class="h-10 md:h-12 w-auto object-contain brightness-0 invert transition-all duration-300" />
+             class="h-10 md:h-12 w-auto object-contain brightness-0 invert transition-all duration-300" decoding="async" />
       </a>
 
       <div id="desktop-menu" class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-slate-300 transition-colors duration-300">
@@ -115,14 +117,17 @@
   </div>
 
   <main>
+    <div id="header-trigger" aria-hidden="true" style="position:absolute;top:80px;left:0;width:1px;height:1px;pointer-events:none;"></div>
+    <div id="backtotop-trigger" aria-hidden="true" style="position:absolute;top:400px;left:0;width:1px;height:1px;pointer-events:none;"></div>
+
     <section id="home" class="relative h-screen w-full overflow-hidden flex items-center justify-center">
-      <video autoplay muted loop playsinline preload="metadata" class="absolute inset-0 w-full h-full object-cover z-0">
+      <video autoplay muted loop playsinline preload="metadata" poster="img/fundo site mobile.jpg" class="absolute inset-0 w-full h-full object-cover z-0">
         <source src="img/videoSITE.mp4" type="video/mp4" />
       </video>
 
       <div class="absolute inset-0 bg-[#0f172a]/80 z-10"></div>
 
-      <div class="container mx-auto px-6 relative z-20 text-center md:text-left text-white mt-16" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container mx-auto px-6 relative z-20 text-center md:text-left text-white mt-16">
         <div class="inline-flex items-center gap-2 bg-transparent border border-blue-400 text-blue-400 px-5 py-2 rounded-full text-xs font-bold uppercase mb-6 tracking-wider">
           SOLUÇÕES LOGÍSTICAS E LOCAÇÃO
         </div>
@@ -152,19 +157,19 @@
     <section class="py-12 bg-[#0f172a] relative z-30">
       <div class="container mx-auto px-6">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-700">
-          <div class="p-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="p-4">
             <span class="block text-4xl font-extrabold text-white mb-1">27+</span>
             <span class="text-slate-400 font-bold uppercase text-xs tracking-wider">Anos de Experiência</span>
           </div>
-          <div class="p-4 pt-8 md:pt-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-4 pt-8 md:pt-4">
             <span class="block text-4xl font-extrabold text-white mb-1">ISO</span>
             <span class="text-slate-400 font-bold uppercase text-xs tracking-wider">Qualidade e Processos</span>
           </div>
-          <div class="p-4 pt-8 md:pt-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 pt-8 md:pt-4">
             <span class="block text-4xl font-extrabold text-white mb-1">24/7</span>
             <span class="text-slate-400 font-bold uppercase text-xs tracking-wider">Suporte Operacional</span>
           </div>
-          <div class="p-4 pt-8 md:pt-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="p-4 pt-8 md:pt-4">
             <span class="block text-4xl font-extrabold text-blue-500 mb-1">100%</span>
             <span class="text-slate-400 font-bold uppercase text-xs tracking-wider">Foco em Segurança</span>
           </div>
@@ -174,13 +179,13 @@
 
     <section id="servicos" class="py-24 bg-white">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="text-center mb-16">
           <h2 class="text-[#0f172a] text-4xl font-extrabold mb-4">Nossos Serviços</h2>
           <div class="w-16 h-1 bg-blue-600 mx-auto rounded"></div>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-white p-8 rounded-[1.5rem] shadow-sm border border-slate-200 hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="0">
+          <div class="bg-white p-8 rounded-[1.5rem] shadow-sm border border-slate-200 hover:shadow-xl transition-all group">
             <div class="bg-slate-100 w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors group-hover:bg-blue-100">
               <i data-lucide="wrench" class="w-6 h-6 text-[#0f172a]"></i>
             </div>
@@ -188,7 +193,7 @@
             <p class="text-sm text-slate-500 leading-relaxed">Com ou sem mão de obra, com equipamentos e máquinas sob demanda para a sua operação.</p>
           </div>
 
-          <div class="bg-white p-8 rounded-[1.5rem] shadow-sm border border-slate-200 hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-white p-8 rounded-[1.5rem] shadow-sm border border-slate-200 hover:shadow-xl transition-all group">
             <div class="bg-slate-100 w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors group-hover:bg-blue-100">
               <i data-lucide="boxes" class="w-6 h-6 text-[#0f172a]"></i>
             </div>
@@ -196,7 +201,7 @@
             <p class="text-sm text-slate-500 leading-relaxed">Equipamentos de movimentação e linha amarela com foco integral em segurança.</p>
           </div>
 
-          <div class="bg-white p-8 rounded-[1.5rem] shadow-sm border border-slate-200 hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-white p-8 rounded-[1.5rem] shadow-sm border border-slate-200 hover:shadow-xl transition-all group">
             <div class="bg-slate-100 w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors group-hover:bg-blue-100">
               <i data-lucide="package-search" class="w-6 h-6 text-[#0f172a]"></i>
             </div>
@@ -209,23 +214,23 @@
 
     <section id="por-que-seday" class="py-24 bg-[#0f172a] text-white">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Por que terceirizar a sua logística conosco?</h2>
           <p class="text-slate-400 max-w-2xl mx-auto text-lg">Elimine as dores de cabeça com a manutenção e os atrasos. Deixe a operação pesada com quem entende.</p>
         </div>
         
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-slate-800/50 border border-slate-700 shadow-sm p-8 rounded-2xl hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="0">
+          <div class="bg-slate-800/50 border border-slate-700 shadow-sm p-8 rounded-2xl hover:shadow-lg transition-all">
             <div class="text-blue-500 mb-6 bg-slate-700 w-16 h-16 rounded-full flex items-center justify-center"><i data-lucide="settings-2" class="w-8 h-8"></i></div>
             <h3 class="text-white text-xl font-bold mb-3">Zero Preocupações com Manutenção</h3>
             <p class="text-slate-400 text-sm leading-relaxed">A nossa frota possui um rigoroso plano de manutenção preventiva, garantindo que a sua operação nunca pare por quebra de equipamentos.</p>
           </div>
-          <div class="bg-slate-800/50 border border-slate-700 shadow-sm p-8 rounded-2xl hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-slate-800/50 border border-slate-700 shadow-sm p-8 rounded-2xl hover:shadow-lg transition-all">
             <div class="text-blue-500 mb-6 bg-slate-700 w-16 h-16 rounded-full flex items-center justify-center"><i data-lucide="users" class="w-8 h-8"></i></div>
             <h3 class="text-white text-xl font-bold mb-3">Mão de Obra Qualificada</h3>
             <p class="text-slate-400 text-sm leading-relaxed">Motoristas e operadores treinados com certificações ativas para atuar nos ambientes mais severos da mineração e da indústria.</p>
           </div>
-          <div class="bg-slate-800/50 border border-slate-700 shadow-sm p-8 rounded-2xl hover:shadow-lg transition-all" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-slate-800/50 border border-slate-700 shadow-sm p-8 rounded-2xl hover:shadow-lg transition-all">
             <div class="text-blue-500 mb-6 bg-slate-700 w-16 h-16 rounded-full flex items-center justify-center"><i data-lucide="file-check-2" class="w-8 h-8"></i></div>
             <h3 class="text-white text-xl font-bold mb-3">Conformidade e Segurança</h3>
             <p class="text-slate-400 text-sm leading-relaxed">Trabalhamos dentro de todas as normas técnicas e ambientais, protegendo a sua empresa de passivos e riscos na via.</p>
@@ -236,7 +241,7 @@
 
     <section id="equipamentos" class="py-24 bg-slate-50 border-b border-slate-200">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="text-center mb-16">
           <h2 class="text-[#0f172a] text-4xl font-extrabold mb-4">A Nossa Frota</h2>
           <p class="text-slate-600 max-w-2xl mx-auto">
             Equipamentos atualizados para garantir alta performance e segurança no canteiro de obras ou na estrada.
@@ -244,189 +249,238 @@
         </div>
 
         <div class="mb-16">
-          <div class="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4" data-aos="fade-right">
+          <div class="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4">
             <div class="bg-blue-600 p-3 rounded-xl text-white"><i data-lucide="truck" class="w-7 h-7"></i></div>
             <h3 class="text-3xl font-extrabold text-[#0f172a]">Frota Rodoviária</h3>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="0">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Basculantes%20Traçados.jpg" alt="Basculantes Traçados" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Basculantes%20Traçados.jpg" alt="Basculantes Traçados" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Basculantes Traçados</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Caminhões%20Munck.webp" alt="Caminhões Munck" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Caminhões%20Munck.webp" alt="Caminhões Munck" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Caminhões Munck</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Carretas%20Prancha.png" alt="Carretas Prancha" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Carretas%20Prancha.png" alt="Carretas Prancha" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Carretas Prancha</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Caminhões%20Comboio.png" alt="Caminhões Comboio" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Caminhões%20Comboio.png" alt="Caminhões Comboio" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Caminhões Comboio</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Caminhões%20Pipa.png" alt="Caminhões Pipa" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Caminhões%20Pipa.png" alt="Caminhões Pipa" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Caminhões Pipa</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Carretas%20Carga%20Seca.webp" alt="Carretas Carga Seca" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Carretas%20Carga%20Seca.webp" alt="Carretas Carga Seca" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Carretas Carga Seca</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Caminhões%20Truck%20Carga%20Seca.png" alt="Truck Carga Seca" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Caminhões%20Truck%20Carga%20Seca.png" alt="Truck Carga Seca" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Truck Carga Seca</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="700">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Caminhões%20¾%20com%20cabine%20suplementar.png" alt="Caminhão 3/4" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Caminhões%20¾%20com%20cabine%20suplementar.png" alt="Caminhão 3/4" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Caminhões ¾ (Cab. Sup.)</h4>
               </div>
             </div>
-
           </div>
         </div>
 
         <div>
-          <div class="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4" data-aos="fade-right">
+          <div class="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4">
             <div class="bg-blue-600 p-3 rounded-xl text-white"><i data-lucide="boxes" class="w-7 h-7"></i></div>
             <h3 class="text-3xl font-extrabold text-[#0f172a]">Linha Amarela & Movimentação</h3>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="0">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Carregadeiras%20de%20grande%20porte.png" alt="Carregadeiras" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Carregadeiras%20de%20grande%20porte.png" alt="Carregadeiras" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Carregadeiras</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Escavadeiras%20Hidráulicas.webp" alt="Escavadeiras Hidráulicas" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Escavadeiras%20Hidráulicas.webp" alt="Escavadeiras Hidráulicas" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Escavadeiras Hidráulicas</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Retroescavadeiras%20cabinadas.png" alt="Retroescavadeiras" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Retroescavadeiras%20cabinadas.png" alt="Retroescavadeiras" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Retroescavadeiras</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Empilhadeiras%20industriais.png" alt="Empilhadeiras industriais" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Empilhadeiras%20industriais.png" alt="Empilhadeiras industriais" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Empilhadeiras</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Transpaleteiras.png" alt="Transpaleteiras" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Transpaleteiras.png" alt="Transpaleteiras" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Transpaleteiras</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Tratores%20de%20esteira%20e%20de%20pneus.jpg" alt="Tratores" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Tratores%20de%20esteira%20e%20de%20pneus.jpg" alt="Tratores" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Tratores</h4>
               </div>
             </div>
 
-            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group">
               <div class="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
-                <img src="Equipamentos/Manipuladores%20Telescópicos.png" alt="Manipuladores Telescópicos" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
+                <img src="Equipamentos/Manipuladores%20Telescópicos.png" alt="Manipuladores Telescópicos" loading="lazy" decoding="async" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500">
               </div>
               <div class="p-5 border-t border-slate-100">
                 <h4 class="text-md font-bold text-[#0f172a] text-center">Manipuladores Telescópicos</h4>
               </div>
             </div>
-
           </div>
         </div>
 
       </div>
     </section>
 
-    <section id="credibilidade" class="py-24 bg-white border-b border-slate-200">
+    <section id="mvv" class="py-24 bg-slate-50 border-b border-slate-200">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-16" data-aos="fade-up">
-          <h2 class="text-[#0f172a] text-3xl md:text-4xl font-extrabold mb-4">Empresas que confiam na Seday</h2>
-          <p class="text-slate-600 max-w-2xl mx-auto">A sua carga tratada com o mesmo padrão de exigência das maiores indústrias do país.</p>
+        <div class="text-center mb-16">
+          <h2 class="text-[#0f172a] text-4xl font-extrabold mb-4">Visão, Missão e Valores</h2>
+          <p class="text-slate-600 max-w-2xl mx-auto">
+            As diretrizes que orientam nossa operação, conduta e nosso forte compromisso com os resultados.
+          </p>
+          <div class="w-16 h-1 bg-blue-600 mx-auto rounded mt-6"></div>
         </div>
 
-        <div class="logo-carousel" aria-label="Principais clientes" data-aos="zoom-in">
-          <div class="logo-track row-1">
-            <div class="logo-set">
-              <img src="img/cliente-gps.png" alt="Grupo GPS" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-usiminas.png" alt="Usiminas" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/mrslog.png" alt="MRS" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-magnesita.png" alt="RHI Magnesita" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-vale.png" alt="Vale" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-vli.png" alt="VLI" class="client-logo h-16 w-auto object-contain shrink-0">
-              <img src="img/cliente-gps.png" alt="Grupo GPS" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-usiminas.png" alt="Usiminas" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/mrslog.png" alt="MRS" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-magnesita.png" alt="RHI Magnesita" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-vale.png" alt="Vale" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-vli.png" alt="VLI" class="client-logo h-16 w-auto object-contain shrink-0">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+            <div class="bg-[#0f172a] text-white px-6 py-4 border-b border-slate-700">
+              <h3 class="text-xl font-extrabold tracking-wide uppercase">Missão</h3>
             </div>
-            <div class="logo-set" aria-hidden="true">
-              <img src="img/cliente-gps.png" alt="" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-usiminas.png" alt="" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/mrslog.png" alt="" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-magnesita.png" alt="" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-vale.png" alt="" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-vli.png" alt="" class="client-logo h-16 w-auto object-contain shrink-0">
+            <div class="p-7">
+              <p class="text-slate-600 leading-relaxed text-justify">
+                Prover soluções operacionais altamente eficazes na locação de máquinas, equipamentos e transportes logísticos, pautadas em segurança, agilidade e qualidade técnica, sempre respeitando as metas dos clientes e o meio ambiente.
+              </p>
             </div>
           </div>
-          <div class="logo-track row-2">
+
+          <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+            <div class="bg-[#0f172a] text-white px-6 py-4 border-b border-slate-700">
+              <h3 class="text-xl font-extrabold tracking-wide uppercase">Visão</h3>
+            </div>
+            <div class="p-7">
+              <p class="text-slate-600 leading-relaxed text-justify">
+                Consolidar a Seday como a principal parceira estratégica no fornecimento de equipamentos pesados e logística do Sudeste brasileiro, destacando-se pelo atendimento pleno, responsabilidade socioambiental e robustez de processos.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+            <div class="bg-[#0f172a] text-white px-6 py-4 border-b border-slate-700">
+              <h3 class="text-xl font-extrabold tracking-wide uppercase">Valores</h3>
+            </div>
+            <div class="p-7">
+              <ul class="space-y-3 text-slate-600">
+                <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2.5 h-2.5 rounded-full bg-blue-600"></span><span>Segurança intransigente</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2.5 h-2.5 rounded-full bg-blue-600"></span><span>Ética e transparência</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2.5 h-2.5 rounded-full bg-blue-600"></span><span>Respeito contínuo ao cliente</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2.5 h-2.5 rounded-full bg-blue-600"></span><span>Valorização de profissionais</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2.5 h-2.5 rounded-full bg-blue-600"></span><span>Aperfeiçoamento constante</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2.5 h-2.5 rounded-full bg-blue-600"></span><span>Credibilidade no mercado</span></li>
+                <li class="flex items-start gap-3"><span class="mt-1 inline-block w-2.5 h-2.5 rounded-full bg-blue-600"></span><span>Compromisso integral com o Resultado</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="credibilidade" class="py-24 bg-white border-b border-slate-200">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-[#0f172a] text-3xl md:text-4xl font-extrabold mb-4">Empresas que confiam na Seday</h2>
+          <p class="text-slate-600 max-w-2xl mx-auto">Sua operação e maquinário com o mesmo padrão de exigência das maiores indústrias e construtoras.</p>
+        </div>
+
+        <div class="logo-carousel" aria-label="Principais clientes">
+          <div class="logo-track row-1">
             <div class="logo-set">
-               <img src="img/cliente-mip.png" alt="MIP" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-milplan.png" alt="Milplan" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-timken.png" alt="Timken" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-aterpa.png" alt="Aterpa" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-reframax.webp" alt="Reframax" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-terraco.png" alt="Terraço" class="client-logo h-16 w-auto object-contain shrink-0">
-               <img src="img/cliente-mip.png" alt="MIP" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-milplan.png" alt="Milplan" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-timken.png" alt="Timken" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-aterpa.png" alt="Aterpa" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-reframax.webp" alt="Reframax" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-terraco.png" alt="Terraço" class="client-logo h-16 w-auto object-contain shrink-0">
+              <img src="img/cliente-gps.png" alt="Grupo GPS" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-usiminas.png" alt="Usiminas" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/mrslog.png" alt="MRS" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-magnesita.png" alt="RHI Magnesita" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-vale.png" alt="Vale" loading="lazy" decoding="async" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-vli.png" alt="VLI" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0">
+              <img src="img/cliente-gps.png" alt="Grupo GPS" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-usiminas.png" alt="Usiminas" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/mrslog.png" alt="MRS" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-magnesita.png" alt="RHI Magnesita" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-vale.png" alt="Vale" loading="lazy" decoding="async" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-vli.png" alt="VLI" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0">
             </div>
             <div class="logo-set" aria-hidden="true">
-               <img src="img/cliente-mip.png" alt="" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-milplan.png" alt="" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-timken.png" alt="" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-aterpa.png" alt="" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-reframax.webp" alt="" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-terraco.png" alt="" class="client-logo h-16 w-auto object-contain shrink-0">
+              <img src="img/cliente-gps.png" alt="" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-usiminas.png" alt="" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/mrslog.png" alt="" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-magnesita.png" alt="" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-vale.png" alt="" loading="lazy" decoding="async" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-vli.png" alt="" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0">
+            </div>
+          </div>
+          <div class="logo-track row-2 mt-8">
+            <div class="logo-set">
+               <img src="img/cliente-mip.png" alt="MIP" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-milplan.png" alt="Milplan" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-timken.png" alt="Timken" loading="lazy" decoding="async" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-aterpa.png" alt="Aterpa" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-reframax.webp" alt="Reframax" loading="lazy" decoding="async" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-terraco.png" alt="Terraço" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0">
+               <img src="img/cliente-mip.png" alt="MIP" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-milplan.png" alt="Milplan" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-timken.png" alt="Timken" loading="lazy" decoding="async" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-aterpa.png" alt="Aterpa" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-reframax.webp" alt="Reframax" loading="lazy" decoding="async" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-terraco.png" alt="Terraço" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0">
+            </div>
+            <div class="logo-set" aria-hidden="true">
+               <img src="img/cliente-mip.png" alt="" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-milplan.png" alt="" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-timken.png" alt="" loading="lazy" decoding="async" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-aterpa.png" alt="" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0"><img src="img/cliente-reframax.webp" alt="" loading="lazy" decoding="async" class="client-logo h-14 w-auto object-contain shrink-0"><img src="img/cliente-terraco.png" alt="" loading="lazy" decoding="async" class="client-logo h-16 w-auto object-contain shrink-0">
             </div>
           </div>
         </div>
@@ -435,15 +489,15 @@
 
     <section id="faq" class="py-24 bg-slate-50 border-b border-slate-200">
       <div class="container mx-auto px-6 max-w-4xl">
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="text-center mb-16">
           <h2 class="text-[#0f172a] text-4xl font-extrabold mb-4">Dúvidas Frequentes</h2>
           <p class="text-slate-600">Respostas rápidas para agilizar o planejamento da sua operação.</p>
         </div>
         
-        <div class="space-y-4" data-aos="fade-up">
+        <div class="space-y-4">
           <details class="group border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm">
             <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-[#0f172a] hover:bg-slate-50 transition-colors">
-              Como funciona a locação de máquinas pesadas?
+              Como funciona a locação de máquinas pesadas na Seday?
               <span class="transition group-open:rotate-180">
                 <i data-lucide="chevron-down" class="text-blue-600"></i>
               </span>
@@ -484,7 +538,7 @@
       <div class="container mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-16 items-start">
           
-          <div data-aos="fade-right" class="flex flex-col h-full">
+          <div class="flex flex-col h-full">
             <span class="text-blue-400 font-bold uppercase tracking-widest text-xs mb-3 block">CONTATO DIRETO</span>
             <h2 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">Receba uma Proposta Comercial</h2>
             <p class="text-slate-300 mb-8 text-base leading-relaxed">Nossa equipe de engenharia logística está pronta para analisar sua demanda e desenhar a operação com o melhor custo-benefício.</p>
@@ -518,7 +572,6 @@
                 <div>
                   <p class="font-bold text-white text-sm">Base Operacional</p>
                   <p class="text-slate-400 text-sm italic">Rodovia BR-040, 22750, Barreira - Conselheiro Lafaiete/MG</p>
-                  <a href="https://www.google.com/maps/search/?api=1&query=Rodovia+BR-040%2C+22750%2C+Barreira+-+Conselheiro+Lafaiete%2FMG" target="_blank" rel="noopener noreferrer" class="text-blue-400 text-xs hover:underline mt-1 block">Abrir rota no Google Maps</a>
                 </div>
               </div>
 
@@ -529,7 +582,7 @@
             </div>
           </div>
 
-          <div class="bg-white text-slate-900 p-8 md:p-10 rounded-3xl shadow-2xl relative" data-aos="fade-left">
+          <div class="bg-white text-slate-900 p-8 md:p-10 rounded-3xl shadow-2xl relative">
             <h3 class="text-2xl font-bold mb-6 text-[#0f172a]">Solicite um Orçamento</h3>
             <form action="mailto:comercial@seday.com.br" method="POST" enctype="text/plain" class="space-y-5">
               <div class="grid md:grid-cols-2 gap-5">
@@ -582,7 +635,7 @@
 
     <section id="quem-somos" class="py-24 bg-white">
       <div class="container mx-auto px-6 max-w-5xl">
-        <div class="text-center" data-aos="fade-up">
+        <div class="text-center">
           <span class="text-blue-600 font-bold tracking-widest uppercase text-xs mb-3 block">Nossa História</span>
           <h2 class="text-[#0f172a] text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Mais de 27 Anos de <br class="hidden md:block">Excelência Operacional</h2>
           
@@ -594,7 +647,7 @@
           </p>
         </div>
 
-        <div class="grid sm:grid-cols-2 gap-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="grid sm:grid-cols-2 gap-6">
           <div class="flex items-start gap-5 bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm transition-transform hover:-translate-y-1">
             <div class="text-blue-600 mt-1"><i data-lucide="award" class="w-8 h-8"></i></div>
             <div>
@@ -616,24 +669,26 @@
     <section class="py-16 bg-slate-50 border-t border-slate-200">
       <div class="container mx-auto px-6">
         <div class="text-center mb-10">
-          <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Parte de um Grupo <span class="text-blue-600">Consolidado</span></h3>
-          <p class="text-slate-500">Sinergia estratégica para garantir capacidade de atendimento completa.</p>
+          <h3 class="text-2xl font-bold mb-2 text-[#0f172a]">Parte do Grupo <span class="text-blue-600">Consolidado</span></h3>
+          <p class="text-slate-500">Sinergia estratégica para garantir uma operação logística e industrial 360º.</p>
         </div>
 
-        <div class="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-16" data-aos="zoom-in">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-16">
           <div class="text-center group hover:scale-105 transition-transform">
-            <img src="img/AVAPEX OFICIAL 01.png" alt="Avapex" class="h-14 w-auto mx-auto mb-3 object-contain">
-            <p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Logística de Alta Performance</p>
+            <a href="https://www.avapex.com.br/" target="_blank" rel="noopener noreferrer" title="Visitar site da Avapex">
+              <img src="img/AVAPEX OFICIAL 01.png" alt="Avapex" loading="lazy" decoding="async" class="h-14 w-auto mx-auto mb-3 object-contain">
+            </a>
+            <p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Logística Inteligente</p>
           </div>
           <div class="hidden md:block h-16 w-[1px] bg-slate-200"></div>
           <div class="text-center group hover:scale-105 transition-transform">
-            <img src="img/SEDAY.PADRÃO02transparente.png" alt="Seday" class="h-16 w-auto mx-auto mb-3 object-contain">
+            <img src="img/SEDAY.PADRÃO02transparente.png" alt="Seday" loading="lazy" decoding="async" class="h-16 w-auto mx-auto mb-3 object-contain">
             <p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Locação Linha Amarela</p>
           </div>
           <div class="hidden md:block h-16 w-[1px] bg-slate-200"></div>
           <div class="text-center group hover:scale-105 transition-transform">
             <a href="https://www.innomach.com.br/" target="_blank" rel="noopener noreferrer">
-              <img src="img/INNOMACH EQUIPAMENTO oficial 01.png" alt="Innomach" class="h-12 w-auto mx-auto mb-3 object-contain">
+              <img src="img/INNOMACH EQUIPAMENTO oficial 01.png" alt="Innomach" loading="lazy" decoding="async" class="h-12 w-auto mx-auto mb-3 object-contain">
             </a>
             <p class="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Maquinário Industrial</p>
           </div>
@@ -645,7 +700,7 @@
   <footer class="bg-[#0f172a] pt-12 pb-8 text-slate-400 border-t border-slate-800">
     <div class="container mx-auto px-6 text-center">
       <div class="flex justify-center mb-6">
-        <img src="img/SEDAY.PADRÃO02transparente.png" alt="Seday Logo" class="h-10 opacity-50 brightness-0 invert hover:opacity-100 transition-opacity">
+        <img src="img/SEDAY.PADRÃO02transparente.png" alt="Seday Logo" loading="lazy" decoding="async" class="h-10 opacity-50 brightness-0 invert hover:opacity-100 transition-opacity">
       </div>
       <p class="mb-2 text-sm">© 2026 Seday Transportes e Equipamentos. Todos os direitos reservados.</p>
     </div>
@@ -660,7 +715,6 @@
     </button>
   </div>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
