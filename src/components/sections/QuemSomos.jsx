@@ -30,7 +30,7 @@ export default function QuemSomos() {
             <div className="flex items-start gap-5 bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm transition-transform hover:-translate-y-1">
               <div className="text-[#2B5C85] mt-1"><Award className="w-8 h-8" /></div>
               <div>
-                <h4 className="font-bold text-[#0f172a] text-lg">Qualidade Comprovada</h4>
+                <h3 className="font-bold text-[#0f172a] text-lg">Qualidade Comprovada</h3>
                 <p className="text-sm text-slate-500 mt-2 leading-relaxed">
                   Foco rigoroso em processos e excelência operacional constante.
                 </p>
@@ -39,7 +39,7 @@ export default function QuemSomos() {
             <div className="flex items-start gap-5 bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm transition-transform hover:-translate-y-1">
               <div className="text-[#2B5C85] mt-1"><Map className="w-8 h-8" /></div>
               <div>
-                <h4 className="font-bold text-[#0f172a] text-lg">Cobertura Estratégica</h4>
+                <h3 className="font-bold text-[#0f172a] text-lg">Cobertura Estratégica</h3>
                 <p className="text-sm text-slate-500 mt-2 leading-relaxed">
                   Bases em MG, SP e RJ para pronto atendimento e suporte 24h.
                 </p>
@@ -53,9 +53,9 @@ export default function QuemSomos() {
       <section className="py-16 bg-slate-50 border-t border-slate-200">
         <div className="container mx-auto px-6">
           <div className="text-center mb-10">
-            <h3 className="text-2xl font-bold mb-2 text-[#0f172a]">
+            <h2 className="text-2xl font-bold mb-2 text-[#0f172a]">
               Parte do Grupo <span className="text-[#2B5C85]">Seday</span>
-            </h3>
+            </h2>
             <p className="text-slate-500">Sinergia estratégica para garantir uma operação logística e industrial 360º.</p>
           </div>
 

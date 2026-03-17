@@ -3,12 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seday Transportes e Equipamentos | Locação, Intralogística e Transporte Pesado</title>
-  <meta name="description" content="A Seday atua desde 1999 com locação de máquinas, movimentação de cargas (linha amarela), intralogística e transporte pesado." />
+
+  <!--
+    Title and meta description are injected dynamically by react-helmet-async (SEO.jsx).
+    These fallback values are used by crawlers before JS hydration / for SSG.
+  -->
+  <title>Seday | Locação de Máquinas Linha Amarela, Transporte Pesado e Intralogística</title>
+  <meta name="description" content="Seday Transportes e Equipamentos: locação de máquinas linha amarela (empilhadeiras, escavadeiras, tratores), transporte pesado e intralogística no Sudeste. Desde 1999 em Conselheiro Lafaiete/MG." />
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="/img/SEDAY icone .png" />
+
+  <!-- Critical image preload (LCP candidate on mobile) -->
   <link rel="preload" href="/img/fundo site mobile.jpg" as="image" fetchpriority="high" media="(max-width: 767px)" />
+
+  <!-- Resource hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://maps.google.com" />
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>

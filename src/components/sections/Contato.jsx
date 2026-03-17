@@ -95,7 +95,7 @@ export default function Contato() {
             {success ? (
               <div className="flex flex-col items-center justify-center py-16 gap-4 text-center">
                 <CheckCircle className="w-16 h-16 text-green-500" />
-                <h4 className="text-2xl font-extrabold text-[#0f172a]">Solicitação enviada com sucesso!</h4>
+                <h3 className="text-2xl font-extrabold text-[#0f172a]">Solicitação enviada com sucesso!</h3>
                 <p className="text-slate-500">
                   Nossa equipe entrará em contato em breve. Obrigado pelo interesse na Seday!
                 </p>

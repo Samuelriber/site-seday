@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+import SEO         from './components/ui/SEO'
 import Header      from './components/layout/Header'
 import Footer      from './components/layout/Footer'
 import WhatsAppButton from './components/ui/WhatsAppButton'
@@ -25,6 +26,7 @@ export default function App() {
 
   return (
     <>
+      <SEO />
       <BackToTop />
       <WhatsAppButton />
       <Header />
