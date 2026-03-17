@@ -28,28 +28,22 @@ export default function Header() {
     <>
       <header
         id="main-header"
-        className={`fixed w-full z-40 border-b border-slate-700 transition-all duration-300 py-4 backdrop-blur-sm ${
+        className={`fixed w-full z-40 transition-all duration-300 py-4 ${
           scrolled
-            ? 'bg-white/98 shadow-md border-slate-200'
-            : 'bg-[#0f172a]/95'
+            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200'
+            : 'bg-[#0f172a]/95 backdrop-blur-sm border-b border-slate-700'
         }`}
       >
         <nav className="container mx-auto px-6 md:px-10 flex justify-between items-center">
-          {/* Logo */}
+          {/* Logo — single image, filter toggled via state */}
           <a href="#home" className="flex items-center" aria-label="Página Inicial Seday">
             <img
-              id="logo-white"
               src="/img/SEDAY.PADRÃO02transparente.png"
               alt="Logotipo Seday Transportes"
-              className={`h-10 md:h-12 w-auto object-contain transition-all duration-300 ${scrolled ? 'hidden' : 'block'} brightness-0 invert`}
               decoding="async"
-            />
-            <img
-              id="logo-dark"
-              src="/img/SEDAY.PADRÃO02transparente.png"
-              alt="Logotipo Seday Transportes"
-              className={`h-10 md:h-12 w-auto object-contain transition-all duration-300 ${scrolled ? 'block' : 'hidden'}`}
-              decoding="async"
+              className={`h-10 md:h-12 w-auto object-contain transition-all duration-300 ${
+                scrolled ? '' : 'brightness-0 invert'
+              }`}
             />
           </a>
 
@@ -57,7 +51,7 @@ export default function Header() {
           <div
             id="desktop-menu"
             className={`hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold transition-colors duration-300 ${
-              scrolled ? 'text-slate-700' : 'text-slate-300'
+              scrolled ? 'text-[#0f172a]' : 'text-slate-300'
             }`}
           >
             {navLinks.map(link => (
@@ -81,7 +75,11 @@ export default function Header() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden flex items-center justify-center p-2 rounded-lg bg-slate-800/80 border border-slate-700 text-white shadow-lg backdrop-blur-sm transition-all active:scale-90"
+            className={`md:hidden flex items-center justify-center p-2 rounded-lg border shadow-lg backdrop-blur-sm transition-all active:scale-90 ${
+              scrolled
+                ? 'bg-slate-100 border-slate-300 text-slate-900'
+                : 'bg-slate-800/80 border-slate-700 text-white'
+            }`}
             id="menuBtn"
             aria-label="Abrir menu principal"
             onClick={() => setMenuOpen(true)}
