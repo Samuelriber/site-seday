@@ -15,7 +15,7 @@ export default function WhatsAppButton() {
         <span className="absolute top-1/2 -right-1.5 -translate-y-1/2 border-y-4 border-y-transparent border-l-4 border-l-slate-800" />
       </span>
       <img
-        src="/img/whatsapp.png"
+        src="img/whatsapp.png"
         alt="Logotipo WhatsApp"
         width={40}
         height={40}

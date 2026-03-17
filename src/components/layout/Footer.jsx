@@ -24,7 +24,7 @@ export default function Footer() {
         <div className="container mx-auto px-6 text-center">
           <div className="flex justify-center mb-6">
             <img
-              src="/img/SEDAY.PADRÃO02transparente.png"
+              src="img/seday-padrao02transparente.png"
               alt="Seday Logo"
               loading="lazy"
               decoding="async"

@@ -3,7 +3,7 @@ export default function Hero() {
     <section id="home" className="relative h-screen w-full overflow-hidden flex items-center justify-center">
       {/* Mobile background */}
       <img
-        src="/img/fundo site mobile.jpg"
+        src="img/fundo-site-mobile.jpg"
         alt="Fundo Logística Seday"
         className="absolute inset-0 w-full h-full object-cover z-0 md:hidden"
         fetchPriority="high"
@@ -15,11 +15,11 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        poster="/img/caminhão.webp"
+        poster="img/caminhao.webp"
         className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
         aria-hidden="true"
       >
-        <source src="/img/videoSITE.mp4" type="video/mp4" />
+        <source src="img/videoSITE.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-[#0f172a]/80 z-10" />

@@ -62,7 +62,7 @@ export default function QuemSomos() {
           <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-16">
             <div className="text-center group hover:scale-105 transition-transform">
               <a href="https://www.avapex.com.br/" target="_blank" rel="noopener noreferrer" title="Visitar site da Avapex">
-                <img src="/img/AVAPEX OFICIAL 01.png" alt="Avapex" loading="lazy" decoding="async" className="h-14 w-auto mx-auto mb-3 object-contain" />
+                <img src="img/avapex-oficial-01.png" alt="Avapex" loading="lazy" decoding="async" className="h-14 w-auto mx-auto mb-3 object-contain" />
               </a>
               <p className="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Logística Inteligente</p>
             </div>
@@ -70,7 +70,7 @@ export default function QuemSomos() {
             <div className="hidden md:block h-16 w-px bg-slate-200" />
 
             <div className="text-center group hover:scale-105 transition-transform">
-              <img src="/img/SEDAY.PADRÃO02transparente.png" alt="Seday" loading="lazy" decoding="async" className="h-16 w-auto mx-auto mb-3 object-contain" />
+              <img src="img/seday-padrao02transparente.png" alt="Seday" loading="lazy" decoding="async" className="h-16 w-auto mx-auto mb-3 object-contain" />
               <p className="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Locação Linha Amarela</p>
             </div>
 
@@ -78,7 +78,7 @@ export default function QuemSomos() {
 
             <div className="text-center group hover:scale-105 transition-transform">
               <a href="https://www.innomach.com.br/" target="_blank" rel="noopener noreferrer">
-                <img src="/img/INNOMACH EQUIPAMENTO oficial 01.png" alt="Innomach" loading="lazy" decoding="async" className="h-12 w-auto mx-auto mb-3 object-contain" />
+                <img src="img/innomach-equipamento-oficial-01.png" alt="Innomach" loading="lazy" decoding="async" className="h-12 w-auto mx-auto mb-3 object-contain" />
               </a>
               <p className="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Maquinário Industrial</p>
             </div>

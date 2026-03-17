@@ -38,7 +38,7 @@ export default function Header() {
           {/* Logo — single image, filter toggled via state */}
           <a href="#home" className="flex items-center" aria-label="Página Inicial Seday">
             <img
-              src="/img/SEDAY.PADRÃO02transparente.png"
+              src="img/seday-padrao02transparente.png"
               alt="Logotipo Seday Transportes"
               decoding="async"
               className={`h-10 md:h-12 w-auto object-contain transition-all duration-300 ${
