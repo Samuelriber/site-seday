@@ -5,21 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!--
-    Title and meta description are injected dynamically by react-helmet-async (SEO.jsx).
-    These fallback values are used by crawlers before JS hydration / for SSG.
+    Title & meta description: also injected by react-helmet-async (SEO.jsx).
+    These static values are the fallback for crawlers before JS hydration (WhatsApp, LinkedIn, X).
   -->
   <title>Seday | Locação de Máquinas Linha Amarela, Transporte Pesado e Intralogística</title>
   <meta name="description" content="Seday Transportes e Equipamentos: locação de máquinas linha amarela (empilhadeiras, escavadeiras, tratores), transporte pesado e intralogística no Sudeste. Desde 1999 em Conselheiro Lafaiete/MG." />
 
+  <!-- Canonical (static fallback — react-helmet-async overrides on hydration) -->
+  <link rel="canonical" href="https://www.seday.com.br/" />
+
+  <!-- ── Open Graph (WhatsApp, LinkedIn, Facebook) ─────────────────────
+       Crawlers sociais NÃO executam JS. Estas tags estáticas são
+       obrigatórias para que os previews funcionem antes da hidratação.
+  ─────────────────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.seday.com.br/" />
+  <meta property="og:title"       content="Seday | Locação de Máquinas Linha Amarela, Transporte Pesado e Intralogística" />
+  <meta property="og:description" content="Seday Transportes e Equipamentos: locação de máquinas linha amarela (empilhadeiras, escavadeiras, tratores), transporte pesado e intralogística no Sudeste. Desde 1999 em Conselheiro Lafaiete/MG." />
+  <meta property="og:image"       content="https://www.seday.com.br/img/og-seday.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"   content="Seday Transportes e Equipamentos — Locação de Máquinas e Transporte Pesado" />
+  <meta property="og:locale"      content="pt_BR" />
+  <meta property="og:site_name"   content="Seday Transportes e Equipamentos" />
+
+  <!-- ── Twitter / X Card ─────────────────────────────────────────────
+       X (Twitter) Card Validator também não executa JS no preview.
+  ─────────────────────────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Seday | Locação de Máquinas Linha Amarela, Transporte Pesado e Intralogística" />
+  <meta name="twitter:description" content="Seday Transportes e Equipamentos: locação de máquinas linha amarela, transporte pesado e intralogística no Sudeste. Desde 1999." />
+  <meta name="twitter:image"       content="https://www.seday.com.br/img/og-seday.jpg" />
+  <meta name="twitter:image:alt"   content="Seday Transportes e Equipamentos" />
+
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="img/seday-icone.png" />
+  <link rel="icon" type="image/png" href="/img/seday-icone.png" />
 
-  <!-- Critical image preload (LCP candidate on mobile) -->
-  <link rel="preload" href="img/fundo-site-mobile.jpg" as="image" fetchpriority="high" media="(max-width: 767px)" />
-  <!-- Critical video poster preload (LCP candidate on desktop) -->
-  <link rel="preload" href="img/caminhao.webp" as="image" fetchpriority="high" media="(min-width: 768px)" />
+  <!-- ── Critical Asset Preloads (LCP) ────────────────────────────────
+       fetchpriority="high" garante que o browser inicia o download
+       imediatamente, antes de fazer o parse do CSS/JS.
+  ─────────────────────────────────────────────────────────────────── -->
+  <!-- Mobile LCP: imagem de fundo do Hero -->
+  <link rel="preload" href="/img/fundo-site-mobile.jpg" as="image" type="image/jpeg" fetchpriority="high" media="(max-width: 767px)" />
+  <!-- Desktop LCP: poster do vídeo / caminhão -->
+  <link rel="preload" href="/img/caminhao.webp" as="image" type="image/webp" fetchpriority="high" media="(min-width: 768px)" />
 
-  <!-- Resource hints -->
+  <!-- ── Resource Hints ───────────────────────────────────────────── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://maps.google.com" />
