@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <g fill="#ffffff">
+    <!-- Globe Icon -->
+    <path d="M40 10a30 30 0 100 60 30 30 0 000-60zm0 55c-13.8 0-25-11.2-25-25s11.2-25 25-25 25 11.2 25 25-11.2 25-25 25z" />
+    <path d="M40 15c-6.6 0-12 11.2-12 25s5.4 25 12 25 12-11.2 12-25-5.4-25-12-25zm0 45c-4.4 0-8-9-8-20s3.6-20 8-20 8 9 8 20-3.6 20-8 20z" />
+    <path d="M15 40h50v5H15z" />
+    <path d="M20 25h40v4H20z" />
+    <path d="M20 50h40v4H20z" />
+    
+    <!-- ISO 9001 Text -->
+    <text x="85" y="55" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="44" letter-spacing="2">ISO 9001</text>
+  </g>
+</svg>

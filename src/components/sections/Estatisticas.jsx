@@ -1,6 +1,6 @@
 const stats = [
   { value: '27+',  label: 'Anos de Mercado',    delay: 0   },
-  { value: 'ISO',  label: 'Certificação 9001',   delay: 100 },
+  { isImage: true, value: 'img/iso-9001.svg', alt: 'ISO 9001', label: 'Certificação 9001', delay: 100 },
   { value: '100%', label: 'Operação Segura',     delay: 200 },
   { value: '500+', label: 'Equipamentos Ativos', delay: 300 },
 ]
@@ -16,7 +16,11 @@ export default function Estatisticas() {
             data-aos="fade-up"
             data-aos-delay={s.delay}
           >
-            <span className="text-4xl md:text-5xl font-headline font-black text-primary mb-2">{s.value}</span>
+            {s.isImage ? (
+              <img src={s.value} alt={s.alt} className="h-10 md:h-12 w-auto object-contain mb-2" />
+            ) : (
+              <span className="text-4xl md:text-5xl font-headline font-black text-white mb-2">{s.value}</span>
+            )}
             <span className="text-xs uppercase font-headline tracking-widest text-on-surface-variant">{s.label}</span>
           </div>
         ))}
