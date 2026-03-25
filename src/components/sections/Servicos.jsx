@@ -41,26 +41,32 @@ const services = [
 
 export default function Servicos() {
   return (
-    <section id="servicos" className="py-24 bg-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-[#0f172a] text-4xl font-extrabold mb-4">Nossos Serviços</h2>
-          <div className="w-16 h-1 bg-[#2B5C85] mx-auto rounded" />
+    <section id="servicos" className="py-32 bg-surface">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="mb-20" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl font-headline font-black uppercase mb-4">
+            Serviços <span className="text-primary">Especializados</span>
+          </h2>
+          <div className="h-2 w-32 bg-primary"></div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map(({ Icon, title, desc, delay }) => (
             <div
               key={title}
-              className="bg-white p-8 rounded-[1.5rem] shadow-sm border border-slate-200 hover:shadow-xl transition-all group"
+              className="flex flex-col h-full bg-surface-container p-10 relative group hover:bg-surface-container-high transition-colors duration-300"
               data-aos="fade-up"
               data-aos-delay={delay}
             >
-              <div className="bg-slate-100 w-12 h-12 rounded-xl flex items-center justify-center mb-6 transition-colors group-hover:bg-[#eaf2f8]">
-                <Icon className="w-6 h-6 text-[#0f172a]" aria-hidden="true" />
+              {/* Square icon frame: w-16 h-16 = 64×64px, mathematically centered */}
+              <div className="mb-8 bg-surface-container-highest shrink-0 w-16 h-16 flex items-center justify-center border-b-4 border-primary transition-colors group-hover:bg-primary/10">
+                <Icon size={32} className="text-white" aria-hidden="true" />
               </div>
-              <h3 className="text-lg font-bold mb-3 text-[#0f172a]">{title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">{desc}</p>
+              <h3 className="text-2xl font-headline font-bold uppercase mb-4 text-on-surface">{title}</h3>
+              <p className="text-on-surface-variant mb-8 leading-relaxed">{desc}</p>
+              <a className="mt-auto text-primary font-headline font-bold uppercase flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#orcamento">
+                SAIBA MAIS
+              </a>
             </div>
           ))}
         </div>

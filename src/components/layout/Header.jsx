@@ -26,87 +26,78 @@ export default function Header() {
 
   return (
     <>
-      <header
+      <nav
         id="main-header"
-        className={`fixed w-full z-40 transition-all duration-300 py-4 ${
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-slate-200'
-            : 'bg-[#0f172a]/95 backdrop-blur-sm border-b border-slate-700'
+            ? 'bg-white/98 backdrop-blur-xl border-b border-seday-gray/15 shadow-sm'
+            : 'bg-transparent py-4'
         }`}
       >
-        <nav className="container mx-auto px-6 md:px-10 flex justify-between items-center">
-          {/* Logo — single image, filter toggled via state */}
-          <a href="#home" className="flex items-center" aria-label="Página Inicial Seday">
+        <div className="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-full">
+          <a href="#home" className="flex items-center gap-3" aria-label="Página Inicial Seday">
             <img
               src="img/seday-padrao02transparente.png"
-              alt="Logotipo Seday Transportes"
+              alt="Logotipo Seday Transportes e Equipamentos"
+              width="220"
+              height="48"
               decoding="async"
-              className={`h-10 md:h-12 w-auto object-contain transition-all duration-300 ${
-                scrolled ? '' : 'brightness-0 invert'
-              }`}
+              className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
             />
           </a>
 
           {/* Desktop menu */}
-          <div
-            id="desktop-menu"
-            className={`hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold transition-colors duration-300 ${
-              scrolled ? 'text-[#0f172a]' : 'text-slate-300'
-            }`}
-          >
-            {navLinks.map(link => (
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
+            {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 target={link.external ? '_blank' : undefined}
                 rel={link.external ? 'noopener noreferrer' : undefined}
-                className="hover:text-[#4BA3E3] transition-colors"
+                className="font-headline font-bold uppercase tracking-tighter transition-colors duration-300 text-sm lg:text-base text-white hover:text-primary drop-shadow-md"
               >
                 {link.label}
               </a>
             ))}
-            <a
-              href="#orcamento"
-              className="bg-[#2B5C85] text-white px-6 py-2.5 rounded-full shadow-lg hover:bg-[#1A3B56] hover:scale-105 transition-all font-extrabold"
-            >
-              Contato
-            </a>
           </div>
+
+          <a
+            href="#orcamento"
+            className="hidden md:flex bg-primary text-on-primary font-headline font-bold uppercase px-6 py-2 transition-all duration-300 hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)] active:translate-y-1 items-center justify-center"
+          >
+            Fale Conosco
+          </a>
 
           {/* Mobile toggle */}
           <button
-            className={`md:hidden flex items-center justify-center p-2 rounded-lg border shadow-lg backdrop-blur-sm transition-all active:scale-90 ${
-              scrolled
-                ? 'bg-slate-100 border-slate-300 text-slate-900'
-                : 'bg-slate-800/80 border-slate-700 text-white'
-            }`}
+            className="md:hidden flex items-center justify-center p-2 rounded-lg transition-all hover:bg-primary/10 text-white"
             id="menuBtn"
             aria-label="Abrir menu principal"
             onClick={() => setMenuOpen(true)}
           >
-            <Menu className="w-6 h-6" aria-hidden="true" />
+            <Menu className="w-8 h-8" aria-hidden="true" />
           </button>
-        </nav>
-      </header>
+        </div>
+      </nav>
 
       {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 text-white bg-[#0f172a]">
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-white text-seday-dark">
           <button
-            className="absolute top-6 right-6 p-2 text-white hover:text-[#4BA3E3] transition-colors"
+            className="absolute top-6 right-6 p-2 text-seday-gray hover:text-primary transition-colors"
             aria-label="Fechar menu"
             onClick={closeMenu}
           >
             <X className="w-10 h-10" aria-hidden="true" />
           </button>
 
-          {navLinks.map(link => (
+          {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               target={link.external ? '_blank' : undefined}
               rel={link.external ? 'noopener noreferrer' : undefined}
-              className="text-2xl font-bold hover:text-[#4BA3E3]"
+              className="text-2xl font-headline font-bold uppercase tracking-tighter text-seday-dark hover:text-primary transition-colors"
               onClick={closeMenu}
             >
               {link.label}
@@ -114,10 +105,10 @@ export default function Header() {
           ))}
           <a
             href="#orcamento"
-            className="bg-[#2B5C85] text-white px-10 py-4 rounded-full font-extrabold shadow-2xl active:scale-95"
+            className="bg-primary text-on-primary font-headline font-bold uppercase px-8 py-4 transition-all duration-300 hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)] active:translate-y-1 mt-4"
             onClick={closeMenu}
           >
-            Contato
+            Fale Conosco
           </a>
         </div>
       )}

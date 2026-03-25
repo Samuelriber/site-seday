@@ -1,22 +1,25 @@
 const stats = [
-  { value: '27+',  label: 'Anos de Experiência',  color: 'text-[#0f172a]', delay: 0   },
-  { value: '9001', label: 'ISO de Qualidade',      color: 'text-[#0f172a]', delay: 100 },
-  { value: '24/7', label: 'Suporte Operacional',   color: 'text-[#0f172a]', delay: 200 },
-  { value: '100%', label: 'Foco em Segurança',     color: 'text-[#2B5C85]', delay: 300 },
+  { value: '27+',  label: 'Anos de Mercado',    delay: 0   },
+  { value: 'ISO',  label: 'Certificação 9001',   delay: 100 },
+  { value: '100%', label: 'Operação Segura',     delay: 200 },
+  { value: '500+', label: 'Equipamentos Ativos', delay: 300 },
 ]
 
 export default function Estatisticas() {
   return (
-    <section className="py-12 bg-white relative z-30 -mt-12 mx-6 md:mx-auto max-w-6xl rounded-2xl shadow-2xl border border-slate-100">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-200">
-          {stats.map((s) => (
-            <div key={s.label} className="p-4" data-aos="fade-up" data-aos-delay={s.delay}>
-              <span className={`block text-4xl font-extrabold mb-1 ${s.color}`}>{s.value}</span>
-              <span className="text-slate-500 font-bold uppercase text-xs tracking-wider">{s.label}</span>
-            </div>
-          ))}
-        </div>
+    <section aria-label="Estatísticas da empresa" className="max-w-7xl mx-auto px-8 relative z-20 -mt-20">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        {stats.map((s) => (
+          <div
+            key={s.label}
+            className="bg-surface-container-high rounded-xl shadow-xl p-8 md:py-10 flex flex-col items-center justify-center text-center border-b-4 border-primary"
+            data-aos="fade-up"
+            data-aos-delay={s.delay}
+          >
+            <span className="text-4xl md:text-5xl font-headline font-black text-primary mb-2">{s.value}</span>
+            <span className="text-xs uppercase font-headline tracking-widest text-on-surface-variant">{s.label}</span>
+          </div>
+        ))}
       </div>
     </section>
   )

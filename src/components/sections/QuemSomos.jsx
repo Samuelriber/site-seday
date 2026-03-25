@@ -4,43 +4,43 @@ export default function QuemSomos() {
   return (
     <>
       {/* Quem Somos */}
-      <section id="quem-somos" className="py-24 bg-white">
+      <section id="quem-somos" className="py-24 bg-surface">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center">
-            <span className="text-[#2B5C85] font-bold tracking-widest uppercase text-xs mb-3 block">
+            <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">
               Nossa História
             </span>
-            <h2 className="text-[#0f172a] text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
-              Mais de 27 Anos de <br className="hidden md:block" /> Excelência Operacional
+            <h2 className="text-on-surface text-4xl md:text-6xl font-headline font-black uppercase mb-8 leading-tight">
+              Mais de 27 Anos de <br className="hidden md:block" /> Excelência <span className="text-primary">Operacional</span>
             </h2>
 
-            <p className="text-slate-600 text-lg leading-relaxed mb-6 text-justify md:text-center">
-              A <strong>Seday Transportes e Equipamentos</strong> consolida-se pela credibilidade e forte
+            <p className="text-on-surface-variant text-lg leading-relaxed mb-6 text-justify md:text-center">
+              A <strong className="text-on-surface">Seday Transportes e Equipamentos</strong> consolida-se pela credibilidade e forte
               compromisso com os resultados de cada cliente. Fundada em 1999, somos especialistas em
               locação e prestação de serviços com máquinas e equipamentos, além de transporte pesado.
             </p>
-            <p className="text-slate-600 text-lg leading-relaxed mb-12 text-justify md:text-center">
+            <p className="text-on-surface-variant text-lg leading-relaxed mb-16 text-justify md:text-center">
               Atendemos principalmente siderúrgicas, mineradoras e construtoras. Nossa matriz está
               localizada estrategicamente às margens da BR-040 em Conselheiro Lafaiete/MG, garantindo
               agilidade e prontidão para operações de grande escala em todo o Sudeste.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6">
-            <div className="flex items-start gap-5 bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm transition-transform hover:-translate-y-1">
-              <div className="text-[#2B5C85] mt-1"><Award className="w-8 h-8" /></div>
+          <div className="grid sm:grid-cols-2 gap-8">
+            <div className="flex items-start gap-5 bg-surface-container p-8 border border-outline-variant/20 shadow-sm transition-transform hover:-translate-y-1">
+              <div className="text-primary mt-1"><Award className="w-8 h-8" /></div>
               <div>
-                <h3 className="font-bold text-[#0f172a] text-lg">Qualidade Comprovada</h3>
-                <p className="text-sm text-slate-500 mt-2 leading-relaxed">
+                <h3 className="font-headline font-bold uppercase text-on-surface text-xl">Qualidade Comprovada</h3>
+                <p className="text-sm text-on-surface-variant mt-2 leading-relaxed">
                   Foco rigoroso em processos e excelência operacional constante.
                 </p>
               </div>
             </div>
-            <div className="flex items-start gap-5 bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm transition-transform hover:-translate-y-1">
-              <div className="text-[#2B5C85] mt-1"><Map className="w-8 h-8" /></div>
+            <div className="flex items-start gap-5 bg-surface-container p-8 border border-outline-variant/20 shadow-sm transition-transform hover:-translate-y-1">
+              <div className="text-primary mt-1"><Map className="w-8 h-8" /></div>
               <div>
-                <h3 className="font-bold text-[#0f172a] text-lg">Cobertura Estratégica</h3>
-                <p className="text-sm text-slate-500 mt-2 leading-relaxed">
+                <h3 className="font-headline font-bold uppercase text-on-surface text-xl">Cobertura Estratégica</h3>
+                <p className="text-sm text-on-surface-variant mt-2 leading-relaxed">
                   Bases em MG, SP e RJ para pronto atendimento e suporte 24h.
                 </p>
               </div>
@@ -50,37 +50,37 @@ export default function QuemSomos() {
       </section>
 
       {/* Grupo Seday */}
-      <section className="py-16 bg-slate-50 border-t border-slate-200">
+      <section className="py-24 bg-white border-t border-outline-variant/10">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold mb-2 text-[#0f172a]">
-              Parte do Grupo <span className="text-[#2B5C85]">Seday</span>
+          <div className="text-center mb-16" data-aos="fade-up">
+            <h2 className="text-3xl md:text-5xl font-headline font-black uppercase mb-4 text-[#0f172a]">
+              Parte do Grupo <span className="text-primary">Seday</span>
             </h2>
-            <p className="text-slate-500">Sinergia estratégica para garantir uma operação logística e industrial 360º.</p>
+            <p className="text-slate-600 text-lg font-medium">Sinergia estratégica para garantir uma operação logística e industrial 360º.</p>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-16">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-24">
             <div className="text-center group hover:scale-105 transition-transform">
               <a href="https://www.avapex.com.br/" target="_blank" rel="noopener noreferrer" title="Visitar site da Avapex">
-                <img src="img/avapex-oficial-01.png" alt="Avapex" loading="lazy" decoding="async" className="h-14 w-auto mx-auto mb-3 object-contain" />
+                <img src="img/avapex-oficial-01.png" alt="Avapex" loading="lazy" decoding="async" className="h-16 w-auto mx-auto mb-4 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
               </a>
-              <p className="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Logística Inteligente</p>
+              <p className="text-primary text-xs font-headline font-bold uppercase tracking-widest mt-2">Logística Inteligente</p>
             </div>
 
-            <div className="hidden md:block h-16 w-px bg-slate-200" />
+            <div className="hidden md:block h-24 w-px bg-slate-200" />
 
             <div className="text-center group hover:scale-105 transition-transform">
-              <img src="img/seday-padrao02transparente.png" alt="Seday" loading="lazy" decoding="async" className="h-16 w-auto mx-auto mb-3 object-contain" />
-              <p className="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Locação Linha Amarela</p>
+              <img src="img/seday-padrao02transparente.png" alt="Seday" loading="lazy" decoding="async" className="h-20 w-auto mx-auto mb-4 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
+              <p className="text-primary text-xs font-headline font-bold uppercase tracking-widest mt-2">Locação Linha Amarela</p>
             </div>
 
-            <div className="hidden md:block h-16 w-px bg-slate-200" />
+            <div className="hidden md:block h-24 w-px bg-slate-200" />
 
             <div className="text-center group hover:scale-105 transition-transform">
               <a href="https://www.innomach.com.br/" target="_blank" rel="noopener noreferrer">
-                <img src="img/innomach-equipamento-oficial-01.png" alt="Innomach" loading="lazy" decoding="async" className="h-12 w-auto mx-auto mb-3 object-contain" />
+                <img src="img/innomach-equipamento-oficial-01.png" alt="Innomach" loading="lazy" decoding="async" className="h-14 w-auto mx-auto mb-4 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
               </a>
-              <p className="text-slate-600 text-[10px] font-bold uppercase tracking-widest">Maquinário Industrial</p>
+              <p className="text-primary text-xs font-headline font-bold uppercase tracking-widest mt-2">Maquinário Industrial</p>
             </div>
           </div>
         </div>

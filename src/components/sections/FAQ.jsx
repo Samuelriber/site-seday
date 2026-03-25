@@ -17,23 +17,23 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-24 bg-slate-50 border-b border-slate-200">
+    <section id="faq" className="py-24 bg-background border-t border-outline-variant/10">
       <div className="container mx-auto px-6 max-w-4xl">
-        <div className="text-center mb-16">
-          <h2 className="text-[#0f172a] text-4xl font-extrabold mb-4">Dúvidas Frequentes</h2>
-          <p className="text-slate-600">Respostas rápidas para agilizar o planejamento da sua operação.</p>
+        <div className="text-center mb-16" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl font-headline font-black mb-6 text-on-surface uppercase">Dúvidas Frequentes</h2>
+          <p className="text-on-surface-variant max-w-2xl mx-auto text-lg leading-relaxed">Respostas rápidas para agilizar o planejamento da sua operação.</p>
         </div>
 
         <div className="space-y-4">
           {faqs.map(({ q, a }) => (
-            <details key={q} className="group border border-slate-200 rounded-xl bg-white overflow-hidden shadow-sm">
-              <summary className="flex justify-between items-center font-bold cursor-pointer list-none p-6 text-[#0f172a] hover:bg-slate-50 transition-colors">
+            <details key={q} className="group border border-outline-variant/20 rounded-xl bg-surface-container overflow-hidden shadow-sm transition-all hover:bg-surface-container-highest">
+              <summary className="flex justify-between items-center font-headline font-bold uppercase cursor-pointer list-none p-6 text-on-surface transition-colors">
                 {q}
                 <span className="transition group-open:rotate-180 shrink-0 ml-4">
-                  <ChevronDown className="text-[#2B5C85]" />
+                  <ChevronDown className="text-primary" />
                 </span>
               </summary>
-              <div className="text-slate-600 p-6 pt-0 leading-relaxed bg-white border-t border-slate-100 mt-2">
+              <div className="text-on-surface-variant font-medium p-6 pt-0 leading-relaxed bg-surface-container border-t border-outline-variant/10 mt-2">
                 {a}
               </div>
             </details>

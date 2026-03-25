@@ -30,49 +30,53 @@ const linhaAmarela = [
 
 function EquipmentCard({ name, img, alt, delay }) {
   return (
-    <article
-      className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group"
+    <div
+      className="bg-surface-container border border-outline-variant/20 group hover:border-primary/40 transition-all duration-500"
       data-aos="fade-up"
       data-aos-delay={delay}
     >
-      <div className="h-56 overflow-hidden bg-white flex items-center justify-center p-4">
+      {/* Image box with generous padding so vehicle never fills 100% */}
+      <div className="relative bg-surface-container-highest overflow-hidden flex items-center justify-center p-6" style={{ aspectRatio: '4/3' }}>
         <img
           src={img}
-          alt={alt}
-          width={224}
-          height={224}
+          alt={name}
           loading="lazy"
           decoding="async"
-          className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
+          className="max-h-full max-w-full object-contain opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
         />
+        {/* Blue accent corner */}
+        <div className="absolute top-0 left-0 w-1 h-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
-      <div className="p-5 border-t border-slate-100">
-        <h4 className="text-md font-bold text-[#0f172a] text-center">{name}</h4>
+      {/* Label */}
+      <div className="px-4 py-3 border-t border-outline-variant/20">
+        <h4 className="text-sm font-headline font-bold uppercase text-on-surface leading-tight">{name}</h4>
       </div>
-    </article>
+    </div>
   )
 }
 
 export default function Frota() {
   return (
-    <section id="equipamentos" className="py-24 bg-slate-50 border-b border-slate-200">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-[#0f172a] text-4xl font-extrabold mb-4">A Nossa Frota</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
-            Equipamentos atualizados para garantir alta performance e segurança no canteiro de obras ou na estrada.
+    <section id="equipamentos" className="py-32 bg-surface-container-low border-t border-outline-variant/10">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="text-center mb-20" data-aos="fade-up">
+          <h2 className="text-4xl md:text-6xl font-headline font-black uppercase mb-6 text-on-surface">
+            Nossa <span className="text-primary">Frota</span> de Elite
+          </h2>
+          <p className="text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+            Equipamentos modernos com tecnologia embarcada para máxima produtividade no canteiro de obras ou na estrada.
           </p>
         </div>
 
         {/* Frota Rodoviária */}
-        <div className="mb-16">
-          <div className="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4" data-aos="fade-right">
-            <div className="bg-[#2B5C85] p-3 rounded-xl text-white">
-              <Truck className="w-7 h-7" aria-hidden="true" />
+        <div className="mb-24">
+          <div className="flex items-center gap-4 mb-10 border-b border-outline-variant/20 pb-4" data-aos="fade-right">
+            <div className="bg-primary/10 p-4 text-primary border border-primary/20">
+              <Truck className="w-8 h-8" aria-hidden="true" />
             </div>
-            <h3 className="text-3xl font-extrabold text-[#0f172a]">Frota Rodoviária</h3>
+            <h3 className="text-3xl font-headline font-black uppercase text-on-surface">Frota Rodoviária</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {frotaRodoviaria.map((item, i) => (
               <EquipmentCard key={item.name} {...item} delay={Math.min(i, 7) * 100} />
             ))}
@@ -81,13 +85,13 @@ export default function Frota() {
 
         {/* Linha Amarela */}
         <div>
-          <div className="flex items-center gap-4 mb-8 border-b border-slate-200 pb-4" data-aos="fade-right">
-            <div className="bg-[#2B5C85] p-3 rounded-xl text-white">
-              <Boxes className="w-7 h-7" aria-hidden="true" />
+          <div className="flex items-center gap-4 mb-10 border-b border-outline-variant/20 pb-4" data-aos="fade-right">
+            <div className="bg-primary/10 p-4 text-primary border border-primary/20">
+              <Boxes className="w-8 h-8" aria-hidden="true" />
             </div>
-            <h3 className="text-3xl font-extrabold text-[#0f172a]">Linha Amarela &amp; Movimentação</h3>
+            <h3 className="text-3xl font-headline font-black uppercase text-on-surface">Linha Amarela &amp; Movimentação</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-8">
             {linhaAmarela.map((item, i) => (
               <EquipmentCard key={item.name} {...item} delay={Math.min(i, 7) * 100} />
             ))}

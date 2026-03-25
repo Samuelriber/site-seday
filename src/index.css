@@ -1,3 +1,76 @@
+/* ── Segoe UI – Local Font Faces ─────────────────────── */
+/* Adicione os arquivos .ttf correspondentes em public/fonts/ */
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeuithis.ttf")  format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeuithibd.ttf") format("truetype");
+  font-weight: 100 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeuil.ttf")  format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeui.ttf")   format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeuii.ttf")  format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/seguisb.ttf")   format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/seguisbi.ttf")  format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeuib.ttf")  format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/segoeuiz.ttf")  format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Segoe UI";
+  src: url("/fonts/seguibl.ttf")   format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,10 +78,12 @@
 * { box-sizing: border-box; }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  background-color: #0f172a;
+  color: #f8fafc;
 }
 
 /* ── Logo switching ──────────────────────────────────── */
@@ -51,12 +126,22 @@ header.scrolled #desktop-menu a:hover { color: #2B5C85 !important; }
 @keyframes scroll-left  { from { transform: translate3d(0,   0, 0); } to { transform: translate3d(-50%, 0, 0); } }
 @keyframes scroll-right { from { transform: translate3d(-50%, 0, 0); } to { transform: translate3d(0,   0, 0); } }
 
-.client-logo {
-  filter: grayscale(100%);
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-.client-logo:hover { filter: grayscale(0%); opacity: 1; }
+
 
 /* ── FAQ summary arrow ───────────────────────────────── */
 details > summary::-webkit-details-marker { display: none; }
+
+.hazard-stripe {
+  background: repeating-linear-gradient(
+      45deg,
+      #0053db,
+      #0053db 10px,
+      #1e293b 10px,
+      #1e293b 20px
+  );
+}
+
+.topography-bg {
+  background-image: radial-gradient(#45464d 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+}

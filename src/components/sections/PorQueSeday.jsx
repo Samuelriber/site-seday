@@ -29,31 +29,32 @@ const cards = [
 
 export default function PorQueSeday() {
   return (
-    <section id="por-que-seday" className="py-24 bg-slate-50 border-y border-slate-200">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-[#0f172a] text-3xl md:text-4xl font-extrabold mb-4">
+    <section id="por-que-seday" className="py-24 bg-surface-container border-y border-outline-variant/10">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-20" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl font-headline font-black mb-6 text-on-surface uppercase">
             Por que terceirizar a sua logística conosco?
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+          <p className="text-on-surface-variant max-w-3xl mx-auto text-lg leading-relaxed">
             Terceirizar a logística não é apenas transferir uma operação: é transformar custo fixo em
             eficiência operacional, previsibilidade financeira e foco estratégico.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {cards.map(({ Icon, title, desc, delay }) => (
             <div
               key={title}
-              className="bg-white border border-slate-200 shadow-sm p-8 rounded-2xl hover:shadow-lg transition-all"
+              className="bg-surface-container-high border border-outline-variant/10 p-10 rounded-2xl hover:bg-surface-container-highest transition-all group"
               data-aos="fade-up"
               data-aos-delay={delay}
             >
-              <div className="text-[#2B5C85] mb-6 bg-[#eaf2f8] w-16 h-16 rounded-full flex items-center justify-center">
-                <Icon className="w-8 h-8" aria-hidden="true" />
+              <div className="bg-primary border border-primary/40 aspect-square w-16 h-16 flex items-center justify-center mb-8 relative overflow-hidden">
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity" />
+                <Icon className="w-8 h-8 text-white relative z-10" aria-hidden="true" />
               </div>
-              <h3 className="text-[#0f172a] text-xl font-bold mb-3">{title}</h3>
-              <p className="text-slate-500 text-sm leading-relaxed">{desc}</p>
+              <h3 className="text-on-surface text-xl font-headline font-black uppercase mb-4">{title}</h3>
+              <p className="text-on-surface-variant font-medium leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>

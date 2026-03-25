@@ -19,16 +19,16 @@ const row2 = [
 function LogoSet({ logos, visible }) {
   return (
     <div className="logo-set" aria-hidden={!visible || undefined}>
-      {logos.map((l, i) => (
+      {logos.map((l) => (
         <img
-          key={i}
+          key={l.src}
           src={l.src}
           width={l.w}
           height={l.h}
           alt={visible ? l.alt : ''}
           loading="lazy"
           decoding="async"
-          className={`client-logo ${l.cls} w-auto object-contain shrink-0`}
+          className={`client-logo ${l.cls} w-auto object-contain shrink-0 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300`}
         />
       ))}
     </div>
@@ -48,13 +48,13 @@ function LogoTrack({ logos, rowClass }) {
 
 export default function Clientes() {
   return (
-    <section id="credibilidade" className="py-24 bg-slate-50 border-b border-slate-200">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-[#0f172a] text-3xl md:text-4xl font-extrabold mb-4">
+    <section id="credibilidade" className="py-24 bg-white border-t border-outline-variant/10">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-20" data-aos="fade-up">
+          <h2 className="text-4xl md:text-5xl font-headline font-black mb-6 text-seday-dark uppercase">
             Empresas que confiam na Seday
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto">
+          <p className="text-seday-gray max-w-2xl mx-auto text-lg leading-relaxed">
             A sua carga tratada com o mesmo padrão de exigência das maiores indústrias do país.
           </p>
         </div>
