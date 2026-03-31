@@ -145,3 +145,15 @@ details > summary::-webkit-details-marker { display: none; }
   background-image: radial-gradient(#45464d 0.5px, transparent 0.5px);
   background-size: 24px 24px;
 }
+
+/* ── Servicos: 5 cards Flex (3 + 2 centrados) ─────────── */
+.service-card {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .service-card { width: calc(50% - 1rem); }
+}
+@media (min-width: 1024px) {
+  /* gap-8 = 2rem. (3 cards − 1) × 2rem / 3 = 1.333rem por card */
+  .service-card { width: calc(33.333% - 1.333rem); }
+}

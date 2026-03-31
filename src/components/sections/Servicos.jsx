@@ -44,21 +44,32 @@ export default function Servicos() {
           <div className="h-2 w-32 bg-primary"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/*
+          Flex wrap + justify-center:
+          ─ Mobile  → 100% (1 coluna)
+          ─ Tablet  → ~50% (2 por linha)
+          ─ Desktop → ~33% (3 por linha)
+          Com 5 cards, o flex quebra em 3 + 2.
+          O justify-center centra automaticamente os 2 da segunda linha.
+        */}
+        <div className="flex flex-wrap justify-center gap-8">
           {services.map(({ Icon, title, desc, delay }) => (
             <div
               key={title}
-              className="flex flex-col h-full bg-surface-container p-10 relative group hover:bg-surface-container-high transition-colors duration-300"
+              className="service-card flex flex-col bg-surface-container p-10 relative group hover:bg-surface-container-high transition-colors duration-300"
               data-aos="fade-up"
               data-aos-delay={delay}
             >
-              {/* Square icon frame: w-16 h-16 = 64×64px, mathematically centered */}
+              {/* Ícone — moldura quadrada 64×64 px */}
               <div className="mb-8 bg-surface-container-highest shrink-0 w-16 h-16 flex items-center justify-center border-b-4 border-primary transition-colors group-hover:bg-primary/10">
                 <Icon size={32} className="text-white" aria-hidden="true" />
               </div>
               <h3 className="text-2xl font-headline font-bold uppercase mb-4 text-on-surface">{title}</h3>
               <p className="text-on-surface-variant mb-8 leading-relaxed">{desc}</p>
-              <a className="mt-auto text-primary font-headline font-bold uppercase flex items-center gap-2 group-hover:translate-x-2 transition-transform" href="#orcamento">
+              <a
+                className="mt-auto text-primary font-headline font-bold uppercase flex items-center gap-2 group-hover:translate-x-2 transition-transform"
+                href="#orcamento"
+              >
                 SAIBA MAIS
               </a>
             </div>

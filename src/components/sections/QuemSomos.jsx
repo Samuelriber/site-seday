@@ -62,25 +62,22 @@ export default function QuemSomos() {
           <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-24">
             <div className="text-center group hover:scale-105 transition-transform">
               <a href="https://www.avapex.com.br/" target="_blank" rel="noopener noreferrer" title="Visitar site da Avapex">
-                <img src="img/avapex-oficial-01.png" alt="Avapex" loading="lazy" decoding="async" className="h-16 w-auto mx-auto mb-4 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
+                <img src="img/avapex-oficial-01.png" alt="Avapex" loading="lazy" decoding="async" className="h-16 w-auto mx-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
               </a>
-              <p className="text-primary text-xs font-headline font-bold uppercase tracking-widest mt-2">Logística Inteligente</p>
             </div>
 
             <div className="hidden md:block h-24 w-px bg-slate-200" />
 
             <div className="text-center group hover:scale-105 transition-transform">
-              <img src="img/seday-padrao02transparente.png" alt="Seday" loading="lazy" decoding="async" className="h-20 w-auto mx-auto mb-4 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
-              <p className="text-primary text-xs font-headline font-bold uppercase tracking-widest mt-2">Locação Linha Amarela</p>
+              <img src="img/seday-padrao02transparente.png" alt="Seday" loading="lazy" decoding="async" className="h-20 w-auto mx-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
             </div>
 
             <div className="hidden md:block h-24 w-px bg-slate-200" />
 
             <div className="text-center group hover:scale-105 transition-transform">
               <a href="https://www.innomach.com.br/" target="_blank" rel="noopener noreferrer">
-                <img src="img/innomach-equipamento-oficial-01.png" alt="Innomach" loading="lazy" decoding="async" className="h-14 w-auto mx-auto mb-4 object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
+                <img src="img/innomach-equipamento-oficial-01.png" alt="Innomach" loading="lazy" decoding="async" className="h-14 w-auto mx-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity" />
               </a>
-              <p className="text-primary text-xs font-headline font-bold uppercase tracking-widest mt-2">Maquinário Industrial</p>
             </div>
           </div>
         </div>
