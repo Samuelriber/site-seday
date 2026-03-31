@@ -5,6 +5,10 @@
 //  envia e-mail via mail() do PHP/Hostinger.
 // ─────────────────────────────────────────────
 
+// Captura qualquer output espúrio (warnings, notices) para
+// garantir que apenas JSON válido seja enviado ao cliente.
+ob_start();
+
 // ── CORS ──────────────────────────────────────
 header('Access-Control-Allow-Origin: https://www.seday.com.br');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
@@ -179,12 +183,31 @@ $headers .= "Reply-To: {$nome} <{$email}>\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
 // ── Envio ─────────────────────────────────────
-$sent = mail($to, $subject, $body, $headers);
+try {
+    // Descarta qualquer output espúrio acumulado antes de enviar a resposta
+    ob_end_clean();
 
-if ($sent) {
-    http_response_code(200);
-    echo json_encode(['ok' => true, 'message' => 'E-mail enviado com sucesso.']);
-} else {
-    http_response_code(502);
-    echo json_encode(['ok' => false, 'message' => 'Falha ao enviar o e-mail. Tente novamente.']);
+    $sent = mail($to, $subject, $body, $headers);
+
+    if ($sent) {
+        http_response_code(200);
+        echo json_encode(['ok' => true, 'message' => 'E-mail enviado com sucesso.']);
+    } else {
+        $lastError = error_get_last();
+        $detail    = $lastError['message'] ?? 'Função mail() retornou false sem detalhe adicional.';
+        http_response_code(502);
+        echo json_encode([
+            'ok'      => false,
+            'message' => 'Falha ao enviar o e-mail. Verifique as configurações de SMTP da hospedagem.',
+            'debug'   => $detail,
+        ]);
+    }
+} catch (Throwable $e) {
+    ob_end_clean();
+    http_response_code(500);
+    echo json_encode([
+        'ok'      => false,
+        'message' => 'Erro interno no servidor.',
+        'debug'   => $e->getMessage(),
+    ]);
 }

@@ -10,21 +10,21 @@ const frotaRodoviaria = [
   { name: 'Roll on Roll off',                   img: 'Equipamentos/roll-on-roll-off.png',                       alt: 'Locação de Caminhão Roll on Roll off para movimentação e transporte de equipamentos e plataformas industriais' },
   { name: 'Conjunto Carreta Prancha',           img: 'Equipamentos/carretas-prancha.png',                       alt: 'Locação de Conjunto Carreta Prancha para transporte de cargas especiais, máquinas e equipamentos pesados' },
   { name: 'Conjunto Carreta Basculante',        img: 'Equipamentos/basculantes-carreta.png',                    alt: 'Locação de Conjunto Carreta Basculante para transporte de minério, terra e materiais a granel em Minas Gerais' },
-  { name: 'Conjunto Carreta Carga Seca',        img: 'Equipamentos/carretas-carga-seca.jpg',                    alt: 'Transporte de Carga Seca com Conjunto Carreta para logística de distribuição em todo o Sudeste do Brasil' },
+  { name: 'Conjunto Carreta Carga Seca',        img: 'Equipamentos/carretas-carga-seca.png',                    alt: 'Transporte de Carga Seca com Conjunto Carreta para logística de distribuição em todo o Sudeste do Brasil' },
   { name: 'Conjunto Carreta Silo',              img: 'Equipamentos/carreta-silo.png',                           alt: 'Locação de Conjunto Carreta Silo para transporte de granéis sólidos e produtos pulverulentos' },
 ]
 
 const linhaAmarela = [
   { name: 'Empilhadeira à Combustão',  img: 'Equipamentos/empilhadeiras-industriais.png',     alt: 'Locação de Empilhadeira à Combustão para movimentação de cargas industriais em siderúrgicas e mineradoras' },
-  { name: 'Empilhadeira Elétrica',     img: 'Equipamentos/empilhadeira-eletrica.webp',         alt: 'Locação de Empilhadeira Elétrica para intralogística e armazéns industriais com operação silenciosa' },
+  { name: 'Empilhadeira Elétrica',     img: 'Equipamentos/empilhadeira-eletrica.png',          alt: 'Locação de Empilhadeira Elétrica para intralogística e armazéns industriais com operação silenciosa' },
   { name: 'Transpaleteiras',           img: 'Equipamentos/Transpaleteiras.png',                alt: 'Locação de Transpaleteiras Industriais para movimentação de paletes em galpões e centros de distribuição' },
   { name: 'Empilhadeira Retrátil',     img: 'Equipamentos/empilhadeira-retrateis.png',         alt: 'Locação de Empilhadeira Retrátil para operação em corredores estreitos e armazenagem em altura' },
   { name: 'Empilhadeira Big Truck',    img: 'Equipamentos/big-truck.png',                      alt: 'Locação de Empilhadeira Pesada Big Truck para movimentação de grandes cargas e bobinas industriais' },
-  { name: 'Trator de Esteira',         img: 'Equipamentos/tratores-esteira-pneus.jpg',         alt: 'Locação de Trator de Esteira para terraplanagem, mineração e obras em terrenos acidentados em Minas Gerais' },
+  { name: 'Trator de Esteira',         img: 'Equipamentos/tratores-esteira-pneu.png',          alt: 'Locação de Trator de Esteira para terraplanagem, mineração e obras em terrenos acidentados em Minas Gerais' },
   { name: 'Trator de Pneu',            img: 'Equipamentos/trator-de-pneu.png',                 alt: 'Locação de Trator de Pneu para obras civis, movimentação de terra e apoio em canteiros de obras' },
   { name: 'Carregadeira',              img: 'Equipamentos/carregadeiras-grande-porte.png',     alt: 'Locação de Carregadeira de Grande Porte para movimentação de materiais a granel em mineração e construção' },
   { name: 'Escavadeira Hidráulica',    img: 'Equipamentos/escavadeiras-hidraulicas.png',       alt: 'Locação de Escavadeira Hidráulica para mineração, terraplanagem e obras de infraestrutura em Minas Gerais' },
-  { name: 'Retroescavadeira',          img: 'Equipamentos/retroescavadeiras-cabinadas.png',    alt: 'Locação de Retroescavadeira Cabinada para escavação, obras civis e infraestrutura urbana no Sudeste' },
+  { name: 'Retroescavadeira',          img: 'Equipamentos/retroescavadeiras-cabinadas (3).png', alt: 'Locação de Retroescavadeira Cabinada para escavação, obras civis e infraestrutura urbana no Sudeste' },
   { name: 'Manipulador Telescópico',   img: 'Equipamentos/manipuladores-telescopicos.png',     alt: 'Locação de Manipulador Telescópico para içamento e posicionamento de cargas em obras e indústrias' },
 ]
 
@@ -36,10 +36,10 @@ function EquipmentCard({ name, img, alt, delay }) {
       data-aos-delay={delay}
     >
       {/* Image box with generous padding so vehicle never fills 100% */}
-      <div className="relative bg-surface-container-highest overflow-hidden flex items-center justify-center p-6" style={{ aspectRatio: '4/3' }}>
+      <div className="relative bg-transparent overflow-hidden flex items-center justify-center p-6" style={{ aspectRatio: '4/3' }}>
         <img
           src={img}
-          alt={name}
+          alt={alt}
           loading="lazy"
           decoding="async"
           className="max-h-full max-w-full object-contain opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"

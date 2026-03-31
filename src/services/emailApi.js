@@ -22,18 +22,44 @@ export async function sendContactEmail(formData) {
     body: JSON.stringify(formData),
   })
 
+  // 404 → arquivo PHP não encontrado na hospedagem
+  if (response.status === 404) {
+    console.error(
+      '[emailApi] 404 — send-email.php não encontrado. ' +
+      'Verifique se o arquivo está na raiz do domínio na Hostinger.'
+    )
+    throw new Error('Serviço de e-mail não encontrado no servidor (404). Contate o suporte.')
+  }
+
   let payload
+  let rawText = ''
 
   try {
-    payload = await response.json()
+    rawText = await response.text()   // lê como texto primeiro
+    payload = JSON.parse(rawText)     // tenta converter para JSON
   } catch {
     // O servidor retornou algo que não é JSON válido
-    throw new Error('Resposta inesperada do servidor. Tente novamente.')
+    // (HTML de erro, warning do PHP, página 500 da hospedagem, etc.)
+    console.error(
+      `[emailApi] Resposta não-JSON recebida do servidor (HTTP ${response.status}):`,
+      rawText
+    )
+    throw new Error(
+      `Resposta inesperada do servidor (HTTP ${response.status}). ` +
+      'Verifique o console para detalhes.'
+    )
+  }
+
+  // Loga o campo debug do PHP se presente — útil para diagnóstico remoto
+  if (payload?.debug) {
+    console.warn('[emailApi] Debug do servidor PHP:', payload.debug)
   }
 
   // HTTP 400 — campos faltando ou e-mail inválido
   if (response.status === 400) {
-    throw new Error(payload?.message ?? 'Dados inválidos. Verifique os campos e tente novamente.')
+    throw new Error(
+      payload?.message ?? 'Dados inválidos. Verifique os campos e tente novamente.'
+    )
   }
 
   // HTTP 405 — só ocorre se o endpoint for acessado incorretamente
@@ -44,13 +70,16 @@ export async function sendContactEmail(formData) {
   // HTTP 502 — mail() do PHP falhou
   if (response.status === 502) {
     throw new Error(
-      payload?.message ?? 'Não foi possível enviar o e-mail. Tente novamente em alguns instantes.'
+      payload?.message ??
+      'Não foi possível enviar o e-mail. Tente novamente em alguns instantes.'
     )
   }
 
   // Qualquer outro status não-OK
   if (!response.ok) {
-    throw new Error(payload?.message ?? `Erro no servidor (HTTP ${response.status}).`)
+    throw new Error(
+      payload?.message ?? `Erro no servidor (HTTP ${response.status}).`
+    )
   }
 
   return payload // { ok: true, message: '...' }
