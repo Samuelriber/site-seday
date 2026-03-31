@@ -9,10 +9,7 @@ const faqs = [
     q: 'Em quais regiões a Seday atua?',
     a: 'Nossa matriz está localizada estrategicamente em Conselheiro Lafaiete/MG, mas temos estrutura e capilaridade logística para atuar em projetos nos principais pólos de mineração e siderurgia de Minas Gerais, São Paulo, Rio de Janeiro e estados adjacentes.',
   },
-  {
-    q: 'A empresa possui certificações para atuar em áreas de risco?',
-    a: 'Sim. Nossos processos e nossa equipe seguem rigorosamente os padrões de compliance e SSMA (Saúde, Segurança e Meio Ambiente) exigidos por grandes empresas do setor.',
-  },
+
 ]
 
 export default function FAQ() {

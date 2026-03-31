@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react'
+import { Phone, Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { sendContactEmail } from '../../services/emailApi'
 
 const INITIAL = { nome: '', empresa: '', email: '', telefone: '', servico: '', mensagem: '' }
 
@@ -7,6 +8,7 @@ export default function Contato() {
   const [form,    setForm]    = useState(INITIAL)
   const [success, setSuccess] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error,   setError]   = useState('')
 
   const handle = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
@@ -14,11 +16,16 @@ export default function Contato() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
-    // Simula envio (substitua por fetch/emailjs conforme necessário)
-    await new Promise((r) => setTimeout(r, 900))
-    setLoading(false)
-    setSuccess(true)
-    setForm(INITIAL)
+    setError('')
+    try {
+      await sendContactEmail(form)
+      setSuccess(true)
+      setForm(INITIAL)
+    } catch (err) {
+      setError(err.message || 'Ocorreu um erro inesperado. Tente novamente.')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const inputCls =
@@ -165,6 +172,13 @@ export default function Contato() {
                     className={inputCls + ' resize-none'}
                   />
                 </div>
+
+                {error && (
+                  <div role="alert" className="flex items-start gap-3 bg-error/10 border border-error/30 text-error rounded-xl px-4 py-3">
+                    <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" aria-hidden="true" />
+                    <p className="text-sm font-body leading-snug">{error}</p>
+                  </div>
+                )}
 
                 <button
                   type="submit"

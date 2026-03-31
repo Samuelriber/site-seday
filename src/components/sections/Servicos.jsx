@@ -1,41 +1,35 @@
-import { Package, Network, Settings, ArrowUpFromLine, Fuel, Truck } from 'lucide-react'
+import { Network, Settings, ArrowUpFromLine, Fuel, Truck } from 'lucide-react'
 
 const services = [
-  {
-    Icon: Package,
-    title: 'Transporte Rodoviário',
-    desc: 'Transporte rodoviário de carga fechada em todo território nacional com foco na região sudeste.',
-    delay: 0,
-  },
   {
     Icon: Network,
     title: 'Intralogística',
     desc: 'Transporte e movimentação interna com equipamentos móveis principalmente empilhadeiras.',
-    delay: 100,
+    delay: 0,
   },
   {
     Icon: Settings,
     title: 'Locação de Equipamentos',
     desc: 'Frota completa de veículos pesados e máquinas da linha amarela.',
-    delay: 200,
+    delay: 100,
   },
   {
     Icon: ArrowUpFromLine,
     title: 'Içamento de Cargas',
     desc: 'Serviços de movimentação e içamento de carga com caminhões Guindauto e manipuladores.',
-    delay: 300,
+    delay: 200,
   },
   {
     Icon: Fuel,
     title: 'Apoio Logístico',
     desc: 'Caminhão Comboio para abastecimento rápido e suporte tático de frotas em campo.',
-    delay: 400,
+    delay: 300,
   },
   {
     Icon: Truck,
     title: 'Cargas Especiais',
     desc: 'Transporte de cargas especiais e dimensionadas.',
-    delay: 500,
+    delay: 400,
   },
 ]
 
@@ -50,7 +44,7 @@ export default function Servicos() {
           <div className="h-2 w-32 bg-primary"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map(({ Icon, title, desc, delay }) => (
             <div
               key={title}

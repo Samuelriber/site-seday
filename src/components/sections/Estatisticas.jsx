@@ -1,14 +1,13 @@
 const stats = [
   { value: '27+',  label: 'Anos de Mercado',    delay: 0   },
-  { isImage: true, value: 'img/iso-9001.svg', alt: 'ISO 9001', label: 'Certificação 9001', delay: 100 },
-  { value: '100%', label: 'Operação Segura',     delay: 200 },
-  { value: '500+', label: 'Equipamentos Ativos', delay: 300 },
+  { value: '100%', label: 'Operação Segura',     delay: 100 },
+  { value: '500+', label: 'Equipamentos Ativos', delay: 200 },
 ]
 
 export default function Estatisticas() {
   return (
     <section aria-label="Estatísticas da empresa" className="max-w-7xl mx-auto px-8 relative z-20 -mt-20">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {stats.map((s) => (
           <div
             key={s.label}
@@ -16,11 +15,7 @@ export default function Estatisticas() {
             data-aos="fade-up"
             data-aos-delay={s.delay}
           >
-            {s.isImage ? (
-              <img src={s.value} alt={s.alt} className="h-10 md:h-12 w-auto object-contain mb-2" />
-            ) : (
-              <span className="text-4xl md:text-5xl font-headline font-black text-white mb-2">{s.value}</span>
-            )}
+            <span className="text-4xl md:text-5xl font-headline font-black text-white mb-2">{s.value}</span>
             <span className="text-xs uppercase font-headline tracking-widest text-on-surface-variant">{s.label}</span>
           </div>
         ))}
