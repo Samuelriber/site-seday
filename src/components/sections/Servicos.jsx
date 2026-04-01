@@ -3,32 +3,32 @@ import { Network, Settings, ArrowUpFromLine, Fuel, Truck } from 'lucide-react'
 const services = [
   {
     Icon: Network,
-    title: 'Intralogística',
-    desc: 'Transporte e movimentação interna com equipamentos móveis principalmente empilhadeiras.',
+    title: 'Intralogística Industrial',
+    desc: 'Movimentação interna de materiais com empilhadeiras à combustão, elétricas e transpaleteiras para siderúrgicas, mineradoras e indústrias.',
     delay: 0,
   },
   {
     Icon: Settings,
-    title: 'Locação de Equipamentos',
-    desc: 'Frota completa de veículos pesados e máquinas da linha amarela.',
+    title: 'Locação de Máquinas Linha Amarela',
+    desc: 'Frota completa de escavadeiras hidráulicas, retroescavadeiras, tratores de esteira, carregadeiras e manipuladores telescópicos para mineração e construção civil.',
     delay: 100,
   },
   {
     Icon: ArrowUpFromLine,
-    title: 'Içamento de Cargas',
-    desc: 'Serviços de movimentação e içamento de carga com caminhões Guindauto e manipuladores.',
+    title: 'Içamento de Cargas Pesadas',
+    desc: 'Movimentação e içamento de carga com caminhões Guindauto (Munck) e manipuladores telescópicos para obras industriais e siderúrgicas.',
     delay: 200,
   },
   {
     Icon: Fuel,
-    title: 'Apoio Logístico',
-    desc: 'Caminhão Comboio para abastecimento rápido e suporte tático de frotas em campo.',
+    title: 'Apoio Logístico em Campo',
+    desc: 'Caminhão Comboio para abastecimento rápido e suporte tático de frotas em campo, minas e canteiros de obras em Minas Gerais.',
     delay: 300,
   },
   {
     Icon: Truck,
-    title: 'Cargas Especiais',
-    desc: 'Transporte de cargas especiais e dimensionadas.',
+    title: 'Transporte de Cargas Especiais',
+    desc: 'Transporte de cargas indivisíveis e superdimensionadas com carretas prancha, carreta silo e conjunto basculante em todo o Sudeste.',
     delay: 400,
   },
 ]
@@ -69,6 +69,7 @@ export default function Servicos() {
               <a
                 className="mt-auto text-primary font-headline font-bold uppercase flex items-center gap-2 group-hover:translate-x-2 transition-transform"
                 href="#orcamento"
+                aria-label={`Solicitar orçamento para ${title}`}
               >
                 SAIBA MAIS
               </a>

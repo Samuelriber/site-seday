@@ -117,14 +117,50 @@ const SCHEMA = {
         'https://www.linkedin.com/company/seday',
       ],
     },
+
+    // ── Nó Service — sinal explícito para Featured Snippets ──
+    {
+      '@type': 'Service',
+      '@id': `${SITE_URL}/#servico-linha-amarela`,
+      name: 'Aluguel de Máquinas Linha Amarela',
+      alternateName: 'Locação de Equipamentos Pesados',
+      description:
+        'Aluguel e locação de máquinas linha amarela: escavadeiras hidráulicas, empilhadeiras industriais, retroescavadeiras, tratores de esteira, carregadeiras e manipuladores telescópicos para mineração, siderurgia e construção civil no Sudeste do Brasil.',
+      serviceType: 'Locação de Equipamentos',
+      provider: { '@id': `${SITE_URL}/#business` },
+      areaServed: [
+        { '@type': 'State', name: 'Minas Gerais'   },
+        { '@type': 'State', name: 'São Paulo'      },
+        { '@type': 'State', name: 'Rio de Janeiro' },
+      ],
+      offers: {
+        '@type': 'Offer',
+        availability: 'https://schema.org/InStock',
+        priceCurrency: 'BRL',
+        priceRange: 'Consulte',
+        url: `${SITE_URL}/#orcamento`,
+      },
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Catálogo de Máquinas Linha Amarela',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Locação de Escavadeira Hidráulica' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Locação de Empilhadeira Industrial' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Locação de Retroescavadeira' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Locação de Trator de Esteira' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Locação de Carregadeira' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Locação de Manipulador Telescópico' } },
+        ],
+      },
+    },
   ],
 }
 
 export default function SEO({
-  title       = 'Seday | Locação de Máquinas Linha Amarela, Transporte Pesado e Intralogística',
-  description = 'Seday Transportes e Equipamentos: locação de máquinas linha amarela (empilhadeiras, escavadeiras, tratores), transporte pesado e intralogística no Sudeste. Desde 1999 em Conselheiro Lafaiete/MG.',
+  title       = 'Aluguel de Máquinas Linha Amarela em MG | Seday Equipamentos',
+  description = 'Aluguel de escavadeiras hidráulicas, empilhadeiras, retroescavadeiras e tratores em Minas Gerais. Seday: +25 anos em locação de máquinas linha amarela para mineração e siderurgia. Solicite orçamento agora.',
   canonicalUrl = `${SITE_URL}/`,
-  keywords    = 'locação de máquinas linha amarela, locação de empilhadeira, locação de escavadeira hidráulica, transporte pesado, intralogística, locação de retroescavadeira, locação de trator de esteira, transporte rodoviário, locação de equipamentos pesados, Conselheiro Lafaiete, Minas Gerais',
+  keywords    = 'aluguel de máquinas linha amarela, locação de máquinas linha amarela, locação de empilhadeira, locação de escavadeira hidráulica, transporte pesado, intralogística, locação de retroescavadeira, locação de trator de esteira, transporte rodoviário, locação de equipamentos pesados, Conselheiro Lafaiete, Minas Gerais',
   ogImage     = OG_IMAGE,
 }) {
   return (

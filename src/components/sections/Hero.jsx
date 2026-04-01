@@ -17,7 +17,7 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
+        preload="none"
         poster="img/caminhao.webp"
         className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
         aria-hidden="true"
@@ -33,10 +33,14 @@ export default function Hero() {
               Liderança em Mineração
           </span>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-headline font-black text-white uppercase leading-none tracking-tighter mb-8 drop-shadow-lg">
-              Força e Precisão <br/> para a sua <span className="text-primary" style={{textShadow: '0 0 30px rgba(56,107,155,0.5)'}}>Operação.</span>
+              Aluguel de Máquinas{' '}<br/>
+              <span className="text-primary" style={{textShadow: '0 0 30px rgba(56,107,155,0.5)'}}>Linha Amarela</span>{' '}
+              e Transporte Pesado
           </h1>
           <p className="text-lg md:text-2xl text-slate-300 max-w-2xl mb-12 leading-relaxed drop-shadow-md">
-              Logística pesada e locação de linha amarela para mineração e siderurgia. Infraestrutura robusta para os desafios mais complexos do setor industrial.
+              Locação de escavadeiras hidráulicas, empilhadeiras, retroescavadeiras e tratores
+              para mineração e siderurgia. Infraestrutura robusta para os desafios mais
+              complexos do setor industrial em Minas Gerais.
           </p>
           <div className="flex flex-wrap gap-5">
             <a href="#orcamento" className="bg-primary text-white font-headline font-bold uppercase px-8 py-4 text-base md:text-lg hover:bg-seday-blue/90 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.3)] transition-all flex items-center justify-center">

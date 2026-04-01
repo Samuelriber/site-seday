@@ -42,6 +42,8 @@ function EquipmentCard({ name, img, alt, delay }) {
           alt={alt}
           loading="lazy"
           decoding="async"
+          width="320"
+          height="240"
           className="max-h-full max-w-full object-contain opacity-75 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
         />
         {/* Blue accent corner */}
@@ -49,7 +51,7 @@ function EquipmentCard({ name, img, alt, delay }) {
       </div>
       {/* Label */}
       <div className="px-4 py-3 border-t border-outline-variant/20">
-        <h4 className="text-sm font-headline font-bold uppercase text-on-surface leading-tight">{name}</h4>
+        <h3 className="text-sm font-headline font-bold uppercase text-on-surface leading-tight">{name}</h3>
       </div>
     </div>
   )
