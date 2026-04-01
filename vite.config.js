@@ -2,10 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  // GitHub Pages: https://samuelriber.github.io/site-seday/
-  // Produção (Hostinger): altere de volta para base: '/'
+  // Produção (Hostinger): base: '/' — site na raiz do domínio www.seday.com.br
+  // GitHub Pages: altere para base: '/site-seday/'
   // Deve estar alinhado com canonical e og:url no SEO.jsx e index.html.
-  base: '/site-seday/',
+  base: '/',
 
   plugins: [react()],
   publicDir: 'public',

@@ -53,6 +53,23 @@ if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
+// ── Honeypot anti-spam ──────────────────────────
+// O campo 'website' é invisível para humanos (CSS display:none no React).
+// Bots o preenchem automaticamente. Retornamos 200 para não alertá-los.
+if (!empty($data['website'] ?? '')) {
+    http_response_code(200);
+    echo json_encode(['ok' => true, 'message' => 'Mensagem recebida.']);
+    exit;
+}
+
+// ── Validação de mensagem (opcional, mínimo 5 chars se preenchida) ───
+$mensagemRaw = trim($data['mensagem'] ?? '');
+if (strlen($mensagemRaw) > 0 && strlen($mensagemRaw) < 5) {
+    http_response_code(400);
+    echo json_encode(['ok' => false, 'message' => 'A mensagem deve ter pelo menos 5 caracteres.']);
+    exit;
+}
+
 // ── Sanitização ───────────────────────────────
 $nome     = htmlspecialchars(trim($data['nome']),     ENT_QUOTES, 'UTF-8');
 $empresa  = htmlspecialchars(trim($data['empresa']),  ENT_QUOTES, 'UTF-8');

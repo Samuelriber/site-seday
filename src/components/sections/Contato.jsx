@@ -87,7 +87,7 @@ export default function Contato() {
               <iframe
                 className="w-full h-full grayscale opacity-80 mix-blend-luminosity contrast-125"
                 title="Mapa Localização Seday"
-                src="https://maps.google.com/maps?q=Rodovia%20BR-040,%2022750,%20Barreira%20-%20Conselheiro%20Lafaiete%20-%20MG&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.851873504225!2d-43.8141696!3d-20.634893700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa1617eb0a3d7ef%3A0x53a74dca132bee6f!2sSeday%20Equipamentos%20ltda!5e0!3m2!1spt-BR!2sbr!4v1775053568292!5m2!1spt-BR!2sbr"
                 loading="lazy"
                 style={{ border: 0 }}
                 referrerPolicy="no-referrer-when-downgrade"
