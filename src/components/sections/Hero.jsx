@@ -18,7 +18,7 @@ export default function Hero() {
         loop
         playsInline
         preload="none"
-        poster="img/caminhao.webp"
+        poster="/img/fundo-site-mobile.jpg"
         className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
         aria-hidden="true"
       >

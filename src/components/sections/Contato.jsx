@@ -157,7 +157,7 @@ export default function Contato() {
                   >
                     <option value="" disabled>Selecione uma opção...</option>
                     <option>Locação de Máquinas Linha Amarela</option>
-                    <option>Transporte Rodoviário / Pesado</option>
+                    <option>[INSIRA O NOVO TERMO DE LOGÍSTICA] / Pesado</option>
                     <option>Operação de Intralogística</option>
                     <option>Movimentação de Carga Pesada</option>
                     <option>Outra Necessidade</option>
