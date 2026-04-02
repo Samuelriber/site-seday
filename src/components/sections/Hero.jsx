@@ -1,25 +1,14 @@
 export default function Hero() {
   return (
-    <header id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden topography-bg min-h-screen flex items-center">
-      {/* Mobile background */}
-      <img
-        src="img/fundo-site-mobile.jpg"
-        alt="Frota de caminhões Seday em operação de transporte pesado em Minas Gerais"
-        width="390"
-        height="844"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover z-0 md:hidden"
-      />
-      {/* Desktop video */}
+    <header id="home" className="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden topography-bg bg-slate-900 min-h-screen flex items-center">
+      {/* Background video */}
       <video
         autoPlay
         muted
         loop
         playsInline
-        preload="none"
-        poster="/img/fundo-site-mobile.jpg"
-        className="absolute inset-0 w-full h-full object-cover z-0 hidden md:block"
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover z-0"
         aria-hidden="true"
       >
         <source src="img/videoSITE.mp4" type="video/mp4" />
