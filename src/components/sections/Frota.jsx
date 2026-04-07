@@ -66,7 +66,9 @@ export default function Frota() {
             Nossa <span className="text-primary">Frota</span> de Elite
           </h2>
           <p className="text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
-            Equipamentos modernos com tecnologia embarcada para máxima produtividade no canteiro de obras ou na estrada.
+            Linha completa de carretas, caminhões, equipamentos de linha amarela e empilhadeiras para
+            atender toda a sua operação. Soluções integradas e eficientes para os desafios mais complexos
+            da indústria pesada.
           </p>
         </div>
 

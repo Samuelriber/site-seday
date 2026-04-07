@@ -15,14 +15,32 @@ export default function QuemSomos() {
             </h2>
 
             <p className="text-on-surface-variant text-lg leading-relaxed mb-6 text-justify md:text-center">
-              A <strong className="text-on-surface">Seday Transportes e Equipamentos</strong> consolida-se pela credibilidade e forte
-              compromisso com os resultados de cada cliente. Fundada em 1999, somos especialistas em
-              locação e prestação de serviços com máquinas e equipamentos, além de transporte pesado.
+              A <strong className="text-on-surface">Seday Transportes</strong> completa 27 anos de estrada, período marcado pela
+              parceria formada com grandes empresas e composta de sinceridade, eficiência e pontualidade.
+              Fundada em 1999 na cidade de Ouro Branco-MG, a empresa atua no ramo de Locação e Prestação
+              de Serviço com Máquinas e Equipamentos, além do Transporte Pesados.
+            </p>
+            <p className="text-on-surface-variant text-lg leading-relaxed mb-6 text-justify md:text-center">
+              Com atuação significativa neste segmento, a Seday Transportes atende siderúrgicas,
+              mineradoras, construtoras e empresas terceiras, locando máquinas e equipamentos e realizando
+              o transporte de seus produtos e subprodutos, em harmonia com o meio ambiente, conquistando o
+              respeito e a confiança de seus stakeholders.
+            </p>
+            <p className="text-on-surface-variant text-lg leading-relaxed mb-6 text-justify md:text-center">
+              A Seday destaca-se por suprir de forma inteligente e eficaz as mais diversas necessidades
+              relacionadas a logística, transporte e movimentação de carga, agregando valor e eficiência
+              aos processos de seus clientes.
+            </p>
+            <p className="text-on-surface-variant text-lg leading-relaxed mb-6 text-justify md:text-center">
+              Dotado de profissionais capacitados e comprometidos com o bom atendimento, a Seday vem
+              construindo ao longo desses 27 anos, junto de seus colaboradores e clientes, uma história
+              alicerçada em competência e credibilidade.
             </p>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-16 text-justify md:text-center">
-              Atendemos principalmente siderúrgicas, mineradoras e construtoras. Nossa matriz está
-              localizada estrategicamente às margens da BR-040 em Conselheiro Lafaiete/MG, garantindo
-              agilidade e prontidão para operações de grande escala em todo o Sudeste.
+              Com o objetivo de otimizar suas operações logísticas, a Seday está estrategicamente
+              localizada com sua matriz em Conselheiro Lafaiete/MG, às margens da BR-040, um posto
+              avançado em Belo Horizonte/MG, e filiais nos estados de São Paulo e Rio de Janeiro. Além
+              de contar com unidades de apoio em Juatuba/MG, Paraopeba/MG e Ipatinga/MG.
             </p>
           </div>
 

@@ -4,13 +4,13 @@ const services = [
   {
     Icon: Network,
     title: 'Intralogística Industrial',
-    desc: 'Movimentação interna de materiais com empilhadeiras à combustão, elétricas e transpaleteiras para siderúrgicas, mineradoras e indústrias.',
+    desc: 'Movimentação interna eficiente com caminhões e máquinas pesadas para operações de grande porte.',
     delay: 0,
   },
   {
     Icon: Settings,
     title: 'Locação de Máquinas Linha Amarela',
-    desc: 'Frota completa de escavadeiras hidráulicas, retroescavadeiras, tratores de esteira, carregadeiras e manipuladores telescópicos para mineração e construção civil.',
+    desc: 'Soluções completas em locação de veículos pesados, máquinas e equipamentos de movimentação, com gestão integrada de manutenção e cobertura total.',
     delay: 100,
   },
   {
