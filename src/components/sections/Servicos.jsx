@@ -9,7 +9,7 @@ const services = [
   },
   {
     Icon: Settings,
-    title: 'Locação de Máquinas Linha Amarela',
+    title: 'Locação de Equipamentos',
     desc: 'Soluções completas em locação de veículos pesados, máquinas e equipamentos de movimentação, com gestão integrada de manutenção e cobertura total.',
     delay: 100,
   },
