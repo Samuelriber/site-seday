@@ -1,12 +1,13 @@
 import { Target, Eye, ShieldCheck } from 'lucide-react'
 
 const valores = [
-  'Ética e transparência',
-  'Respeito contínuo ao cliente',
-  'Valorização de profissionais',
-  'Aperfeiçoamento constante',
-  'Credibilidade no mercado',
-  'Compromisso integral com o Resultado',
+  'Segurança',
+  'Ética',
+  'Respeito ao cliente',
+  'Desenvolvimento profissional',
+  'Melhoria contínua',
+  'Credibilidade',
+  'Compromisso com o Resultado',
 ]
 
 // Shared Icon Frame component – pixel-perfect 64×64px square, mathematically centered
@@ -52,9 +53,7 @@ export default function MVV() {
             <IconFrame><Target size={32} className="text-primary relative z-10" aria-hidden="true" /></IconFrame>
             <h3 className="text-on-surface text-2xl font-headline font-black uppercase mb-4">Missão</h3>
             <p className="text-on-surface-variant font-medium leading-relaxed">
-              Prover soluções operacionais altamente eficazes na locação de máquinas, equipamentos e
-              transportes logísticos, pautadas em segurança, agilidade e qualidade técnica, sempre
-              respeitando as metas dos clientes e o meio ambiente.
+              Dirigir meios eficazes de transportes e locação de máquinas e equipamentos de forma sustentável, com segurança, rapidez, qualidade e respeito aos nossos clientes, em harmonia com o meio ambiente.
             </p>
           </div>
 
@@ -67,9 +66,7 @@ export default function MVV() {
             <IconFrame><Eye size={32} className="text-primary relative z-10" aria-hidden="true" /></IconFrame>
             <h3 className="text-on-surface text-2xl font-headline font-black uppercase mb-4">Visão</h3>
             <p className="text-on-surface-variant font-medium leading-relaxed">
-              Consolidar a Seday como a principal parceira estratégica no fornecimento de equipamentos
-              pesados e logística do Sudeste brasileiro, destacando-se pelo atendimento pleno,
-              responsabilidade socioambiental e robustez de processos.
+              Ser reconhecido pela excelência nos serviços prestados no segmento de transportes e locação de máquinas e equipamentos, satisfazendo plenamente nossos clientes, com compromisso no resultado e responsabilidade socioambiental..
             </p>
           </div>
 
