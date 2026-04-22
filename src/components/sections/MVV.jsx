@@ -1,7 +1,6 @@
 import { Target, Eye, ShieldCheck } from 'lucide-react'
 
 const valores = [
-  'Segurança intransigente',
   'Ética e transparência',
   'Respeito contínuo ao cliente',
   'Valorização de profissionais',
