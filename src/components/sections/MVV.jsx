@@ -66,7 +66,7 @@ export default function MVV() {
             <IconFrame><Eye size={32} className="text-primary relative z-10" aria-hidden="true" /></IconFrame>
             <h3 className="text-on-surface text-2xl font-headline font-black uppercase mb-4">Visão</h3>
             <p className="text-on-surface-variant font-medium leading-relaxed">
-              Ser reconhecido pela excelência nos serviços prestados no segmento de transportes e locação de máquinas e equipamentos, satisfazendo plenamente nossos clientes, com compromisso no resultado e responsabilidade socioambiental..
+              Ser reconhecido pela excelência nos serviços prestados no segmento de transportes e locação de máquinas e equipamentos, satisfazendo plenamente nossos clientes, com compromisso no resultado e responsabilidade socioambiental.
             </p>
           </div>
 
